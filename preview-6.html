@@ -1,0 +1,2922 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modernisierte Doppelhaushälfte in Oberasbach | Nähe Fürth & Nürnberg</title>
+  <meta name="description" content="Modernisierte Doppelhaushälfte in Oberasbach bei Fürth / Nürnberg. 4 Zimmer, 152 m² Wohnfläche, 233 m² Grundstück, hochwertige Ausstattung, Designerküche, spa-ähnliche Bäder, Terrasse und Garage." />
+  <style>
+    :root {
+      --bg: #080507;
+      --bg-soft: #120d0d;
+      --panel: rgba(39, 22, 18, 0.54);
+      --panel-strong: rgba(70, 38, 26, 0.62);
+      --text: #f7efe4;
+      --muted: #d5c4b0;
+      --soft: #b49671;
+      --line: rgba(234, 197, 124, 0.14);
+      --gold: #c7923d;
+      --gold-2: #efd29a;
+      --gold-3: #b9802f;
+      --gold-4: #f3ddb1;
+      --white: #ffffff;
+      --shadow: 0 24px 80px rgba(0,0,0,0.42);
+      --radius: 22px;
+      --container: 1360px;
+      --nav-h: 86px;
+      --transition: 0.45s cubic-bezier(.2,.65,.2,1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(215,157,74,0.14), transparent 24%),
+        radial-gradient(circle at 85% 20%, rgba(203,143,50,0.08), transparent 20%),
+        linear-gradient(180deg, #090608 0%, #0f090a 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 56px), var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-2);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.03;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 92px);
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 60px);
+    }
+
+    h3 {
+      font-size: clamp(22px, 2vw, 32px);
+    }
+
+    p.lead {
+      font-size: clamp(18px, 2vw, 22px);
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    .gold {
+      color: var(--gold-2);
+    }
+
+    .glass {
+      background:
+        linear-gradient(180deg, rgba(72,42,30,0.28), rgba(22,14,14,0.52)),
+        radial-gradient(circle at top right, rgba(239,210,154,0.08), transparent 34%);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 30px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition), color var(--transition);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background:
+        linear-gradient(135deg, #e4bf71 0%, #c7923d 55%, #b77a28 100%);
+      color: #17110d;
+      box-shadow: 0 14px 34px rgba(199,146,61,0.24);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 20px 44px rgba(199,146,61,0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      border-color: rgba(233, 197, 124, 0.16);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(233, 197, 124, 0.3);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #30d46c, #19a84f);
+      color: white;
+      box-shadow: 0 10px 30px rgba(48,212,108,0.2);
+    }
+
+    .top-blur,
+    .bottom-blur {
+      position: absolute;
+      pointer-events: none;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.16;
+      z-index: 0;
+    }
+
+    .top-blur {
+      top: -100px;
+      right: -100px;
+      background: var(--gold);
+    }
+
+    .bottom-blur {
+      bottom: -130px;
+      left: -80px;
+      background: #6e4d2c;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(18px);
+      background: rgba(13, 8, 10, 0.86);
+      border-bottom: 1px solid rgba(235, 198, 123, 0.14);
+      transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .navbar.scrolled {
+      background: rgba(14,9,10,0.96);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+    }
+
+    .nav-inner {
+      min-height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 290px;
+    }
+
+    .brand-top {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--gold-2);
+      text-transform: uppercase;
+      line-height: 0.92;
+    }
+
+    .brand-bottom {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      color: #f1dec2;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .brand-bottom::before,
+    .brand-bottom::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      min-width: 34px;
+      background: linear-gradient(90deg, transparent, rgba(239,210,154,0.95), transparent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ead8c1;
+      font-size: 15px;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-phone {
+      color: #f2d8a2;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      border-radius: 999px;
+      background: rgba(27,16,15,0.72);
+      border: 1px solid rgba(233, 197, 124, 0.14);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .lang-btn {
+      min-width: 64px;
+      height: 40px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-weight: 700;
+      transition: all var(--transition);
+    }
+
+    .lang-btn.active {
+      background:
+        linear-gradient(135deg, #e4bf71 0%, #c7923d 55%, #b77a28 100%);
+      color: #15100c;
+      box-shadow: 0 8px 24px rgba(214,181,116,0.22);
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .nav-menu-mobile {
+      display: none;
+    }
+
+    .hero {
+      min-height: calc(100vh - var(--nav-h));
+      display: flex;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 64px 0 78px;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      overflow: hidden;
+      background: #0a0d10;
+    }
+
+    .hero-video,
+    .hero-fallback-image,
+    .video-carousel-item,
+    .video-carousel-fallback {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.04);
+    }
+
+    .hero-video,
+    .video-carousel-item {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .hero-video.active,
+    .video-carousel-item.active {
+      opacity: 1;
+    }
+
+    .hero-fallback-image,
+    .video-carousel-fallback {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .hero-fallback-image.show,
+    .video-carousel-fallback.show {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(180deg, rgba(8,6,7,0.44) 0%, rgba(10,7,7,0.66) 42%, rgba(11,8,8,0.92) 100%),
+        linear-gradient(90deg, rgba(11,7,8,0.90) 0%, rgba(16,10,10,0.42) 52%, rgba(11,7,8,0.72) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 780px) minmax(420px, 520px);
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      column-gap: 120px;
+      padding: 18px 0;
+    }
+
+    .hero-content {
+      max-width: 780px;
+      padding-left: clamp(18px, 3.5vw, 62px);
+      padding-right: clamp(28px, 4vw, 60px);
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(104,64,39,0.42), rgba(82,49,32,0.36));
+      border: 1px solid rgba(232, 192, 121, 0.18);
+      color: var(--gold-2);
+      margin-bottom: 28px;
+      font-size: 13px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin-bottom: 18px;
+      text-shadow: 0 10px 24px rgba(0,0,0,0.25);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(18px, 2.1vw, 22px);
+      max-width: 720px;
+      color: #e7bc6c;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .hero-description {
+      font-size: clamp(18px, 1.9vw, 21px);
+      max-width: 760px;
+      color: #e2d2bd;
+      margin-bottom: 32px;
+    }
+
+    .hero-facts-inline {
+      display: none;
+    }
+
+    .hero-content .trust-line {
+      margin-top: 18px;
+      color: #d9c0a0;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-card {
+      border-radius: var(--radius);
+      padding: 54px 28px 28px;
+      position: relative;
+      width: 100%;
+      max-width: 510px;
+      justify-self: end;
+      margin-right: clamp(18px, 3vw, 54px);
+      overflow: visible;
+      background:
+        linear-gradient(180deg, rgba(53,32,27,0.38), rgba(21,13,13,0.68)),
+        radial-gradient(circle at top center, rgba(239,210,154,0.08), transparent 46%);
+    }
+
+    .hero-card-badge {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%);
+      min-width: min(92%, 360px);
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 14px;
+      font-weight: 800;
+      color: #23180f;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.22), transparent 18%),
+        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.12), transparent 18%),
+        linear-gradient(135deg, #efcf8e 0%, #d5a451 45%, #b6792e 100%);
+      box-shadow: 0 14px 34px rgba(199,146,61,0.22);
+      border: 1px solid rgba(255,255,255,0.16);
+      z-index: 5;
+    }
+
+    .hero-card .label {
+      color: #ddb96f;
+      font-size: 13px;
+      letter-spacing: 0;
+      font-weight: 500;
+      margin-bottom: 8px;
+      text-transform: none;
+    }
+
+    .price {
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .commission-line {
+      color: #e4d1b4;
+      margin-bottom: 16px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .price-sub {
+      color: var(--muted);
+      margin-bottom: 22px;
+      display: none;
+    }
+
+    .stat-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .stat-item {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(233, 197, 124, 0.12);
+    }
+
+    .stat-item strong {
+      display: block;
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .stat-item span {
+      color: #d4bea1;
+      font-size: 14px;
+    }
+
+    .trust-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+      color: #d5c0a3;
+      font-size: 14px;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .fact-card {
+      padding: 28px;
+      border-radius: var(--radius);
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fact-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -30% -40% auto;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(214,181,116,0.22), transparent 70%);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .fact-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(214,181,116,0.28);
+    }
+
+    .fact-card:hover::after {
+      opacity: 1;
+    }
+
+    .fact-value {
+      font-size: clamp(28px, 3vw, 38px);
+      color: var(--white);
+      margin-bottom: 10px;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .fact-label {
+      color: var(--gold-2);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .fact-card p {
+      font-size: 15px;
+    }
+
+    .description-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .text-panel,
+    .image-panel {
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 100%;
+    }
+
+    .text-panel {
+      padding: 38px;
+    }
+
+    .text-panel p + p {
+      margin-top: 18px;
+    }
+
+    .quote-box {
+      margin-top: 28px;
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid rgba(214,181,116,0.18);
+      background: rgba(214,181,116,0.06);
+      color: var(--white);
+      font-size: 19px;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .image-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 520px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
+      padding: 26px;
+      border-radius: var(--radius);
+      min-height: 210px;
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(214,181,116,0.28);
+    }
+
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      background: rgba(214,181,116,0.12);
+      border: 1px solid rgba(214,181,116,0.22);
+      color: var(--gold-2);
+      font-size: 24px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 280px;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      background: #111;
+    }
+
+    .gallery-item.large {
+      grid-row: span 2;
+      min-height: 580px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease, filter 0.8s ease;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.55) 100%);
+      opacity: 0.9;
+      transition: opacity var(--transition);
+    }
+
+    .gallery-item .caption {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 18px;
+      z-index: 2;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      font-size: 14px;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: saturate(1.08);
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    .gallery-footer {
+      margin-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .video-box,
+    .video-text {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .video-box {
+      position: relative;
+      min-height: 460px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      background: #0f1318;
+    }
+
+    .video-carousel {
+      position: relative;
+      width: 100%;
+      min-height: 460px;
+      height: 100%;
+      overflow: hidden;
+      background: #05080c;
+    }
+
+    .video-carousel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.18));
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .video-carousel-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 4;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
+      color: var(--gold-2);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .video-text {
+      padding: 36px;
+    }
+
+    .video-list {
+      list-style: none;
+      margin: 24px 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .video-list li {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .lifestyle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .lifestyle-card {
+      border-radius: var(--radius);
+      padding: 28px;
+      min-height: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lifestyle-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+
+    .lifestyle-number {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-2);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .lifestyle-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .location-panel,
+    .map-panel {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .location-panel {
+      padding: 36px;
+    }
+
+    .location-list {
+      list-style: none;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .location-list li {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .map-panel iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      border: 0;
+      filter: grayscale(1) contrast(1.1) brightness(0.8);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-info,
+    .contact-form-wrap {
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+
+    .contact-cards {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .contact-card {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .contact-card small {
+      display: block;
+      color: var(--soft);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 6px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .contact-card a,
+    .contact-card span {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 16px 16px;
+      outline: none;
+      transition: border-color var(--transition), background var(--transition), transform var(--transition);
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: rgba(214,181,116,0.48);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .field textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .form-note {
+      margin-top: 14px;
+      color: var(--soft);
+      font-size: 13px;
+    }
+
+    .final-cta {
+      padding-bottom: 120px;
+    }
+
+    .cta-panel {
+      border-radius: 34px;
+      padding: 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-panel::before,
+    .cta-panel::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .cta-panel::before {
+      background: var(--gold);
+      top: -100px;
+      left: -70px;
+    }
+
+    .cta-panel::after {
+      background: #6a4728;
+      bottom: -120px;
+      right: -60px;
+    }
+
+    .cta-panel h2 {
+      max-width: 900px;
+      margin: 0 auto 18px;
+    }
+
+    .cta-panel p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.22);
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(4,6,8,0.9);
+      backdrop-filter: blur(12px);
+      z-index: 1200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-content {
+      position: relative;
+      width: min(1200px, 100%);
+      max-height: 90vh;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: #0c1014;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: 90vh;
+      object-fit: contain;
+      background: #090c0f;
+    }
+
+    .modal-close,
+    .modal-nav {
+      position: absolute;
+      z-index: 2;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(0,0,0,0.45);
+      color: white;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .modal-close:hover,
+    .modal-nav:hover {
+      background: rgba(214,181,116,0.18);
+      transform: scale(1.04);
+    }
+
+    .modal-close {
+      top: 18px;
+      right: 18px;
+    }
+
+    .modal-nav.prev {
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .modal-nav.next {
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .modal-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 20px;
+      z-index: 2;
+      color: var(--muted);
+      background: rgba(0,0,0,0.34);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 14px 16px;
+      border-radius: 14px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1000;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, #30d46c, #149647);
+      box-shadow: 0 18px 44px rgba(20,150,71,0.36);
+      border: 1px solid rgba(255,255,255,0.18);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .floating-wa:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 20px 50px rgba(20,150,71,0.44);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.05s; }
+    .reveal-delay-2 { transition-delay: 0.1s; }
+    .reveal-delay-3 { transition-delay: 0.15s; }
+
+    /* ===== RESPONSIVE FIXES - KEEP MAIN DESIGN ===== */
+
+    @media (max-width: 1444px) {
+      .container {
+        width: min(calc(100% - 44px), var(--container));
+      }
+
+      .nav-inner {
+        gap: 16px;
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+
+      .brand {
+        min-width: 250px;
+      }
+
+      .brand-top {
+        font-size: 34px;
+      }
+
+      .brand-bottom {
+        font-size: 18px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.08fr) minmax(390px, 470px);
+        column-gap: 56px;
+        align-items: center;
+      }
+
+      .hero-content {
+        padding-left: 8px;
+        padding-right: 10px;
+      }
+
+      .hero-card {
+        max-width: 470px;
+        margin-right: 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(52px, 5.6vw, 82px);
+      }
+
+      .hero-description {
+        font-size: clamp(18px, 1.55vw, 21px);
+      }
+    }
+
+    @media (max-width: 1180px) {
+      .container {
+        width: min(calc(100% - 34px), var(--container));
+      }
+
+      .nav-inner {
+        gap: 12px;
+        min-height: 82px;
+      }
+
+      .brand {
+        min-width: 208px;
+      }
+
+      .brand-top {
+        font-size: 30px;
+      }
+
+      .brand-bottom {
+        font-size: 15px;
+        gap: 8px;
+      }
+
+      .brand-bottom::before,
+      .brand-bottom::after {
+        min-width: 20px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+      }
+
+      .nav-cta {
+        gap: 10px;
+      }
+
+      .nav-phone {
+        font-size: 14px;
+      }
+
+      .lang-switch {
+        padding: 5px;
+        gap: 6px;
+      }
+
+      .lang-btn {
+        min-width: 48px;
+        height: 36px;
+        font-size: 14px;
+      }
+
+      .nav-cta .btn {
+        min-height: 48px;
+        padding: 0 22px;
+        font-size: 15px;
+      }
+
+      .hero {
+        min-height: calc(100vh - var(--nav-h));
+        padding: 42px 0 46px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.05fr) minmax(340px, 410px);
+        column-gap: 28px;
+        padding: 8px 0;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        padding-left: 2px;
+        padding-right: 0;
+      }
+
+      .hero-kicker {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        padding: 10px 16px;
+        margin-bottom: 18px;
+        max-width: 95%;
+        line-height: 1.35;
+        flex-wrap: wrap;
+      }
+
+      .hero h1 {
+        font-size: clamp(44px, 6vw, 64px);
+        line-height: 0.98;
+        margin-bottom: 14px;
+        max-width: 100%;
+      }
+
+      .hero-subtitle {
+        font-size: 17px;
+        margin-bottom: 12px;
+        max-width: 100%;
+      }
+
+      .hero-description {
+        font-size: 16px;
+        line-height: 1.65;
+        margin-bottom: 24px;
+        max-width: 100%;
+      }
+
+      .hero-content .btn-group .btn {
+        min-height: 50px;
+        padding: 0 22px;
+        font-size: 15px;
+      }
+
+      .hero-content .trust-line {
+        gap: 10px;
+        font-size: 12px;
+        margin-top: 14px;
+      }
+
+      .hero-card {
+        justify-self: end;
+        width: 100%;
+        max-width: 410px;
+        margin-right: 0;
+        padding: 50px 22px 22px;
+      }
+
+      .hero-card-badge {
+        min-width: min(94%, 320px);
+        padding: 10px 18px;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+      }
+
+      .hero-card .label {
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .price {
+        font-size: clamp(32px, 4.8vw, 50px);
+        text-align: center;
+      }
+
+      .commission-line {
+        font-size: 13px;
+        line-height: 1.45;
+        margin-bottom: 14px;
+      }
+
+      .stat-list {
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .stat-item {
+        padding: 14px;
+      }
+
+      .stat-item strong {
+        font-size: 18px;
+      }
+
+      .stat-item span {
+        font-size: 13px;
+      }
+
+      .hero-card .btn {
+        min-height: 50px;
+        font-size: 15px;
+      }
+
+      .hero-card .trust-line {
+        gap: 9px;
+        font-size: 12px;
+        margin-top: 14px;
+        justify-content: center;
+      }
+
+      .section {
+        padding: 92px 0;
+      }
+
+      .facts-grid,
+      .features-grid,
+      .lifestyle-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .description-grid,
+      .video-grid,
+      .location-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item.large {
+        grid-row: auto;
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links,
+      .nav-cta .nav-phone,
+      .nav-cta > .btn,
+      .lang-switch {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-menu-mobile {
+        position: fixed;
+        top: calc(var(--nav-h) + 10px);
+        left: 16px;
+        right: 16px;
+        background: rgba(11,14,18,0.98);
+        border: 1px solid rgba(255,255,255,0.09);
+        border-radius: 24px;
+        padding: 18px;
+        box-shadow: var(--shadow);
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 998;
+      }
+
+      .nav-menu-mobile.open {
+        display: flex;
+      }
+
+      .nav-menu-mobile a,
+      .nav-menu-mobile button {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 14px 16px;
+        border-radius: 14px;
+        color: var(--muted);
+        background: rgba(255,255,255,0.03);
+        margin: 2px 0;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .nav-menu-mobile a:hover,
+      .nav-menu-mobile button:hover {
+        color: var(--white);
+        background: rgba(255,255,255,0.06);
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--container));
+      }
+
+      .nav-inner {
+        min-height: 76px;
+      }
+
+      .brand {
+        min-width: 0;
+        max-width: 72%;
+      }
+
+      .brand-top {
+        font-size: 28px;
+      }
+
+      .brand-bottom {
+        font-size: 15px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 28px 0 40px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding: 6px 0 0;
+      }
+
+      .hero-content,
+      .hero-card {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+      }
+
+      .hero-content {
+        order: 1;
+      }
+
+      .hero-card {
+        order: 2;
+        justify-self: stretch;
+        max-width: 100%;
+        padding: 56px 22px 22px;
+      }
+
+      .hero-card-badge {
+        min-width: min(94%, 360px);
+      }
+
+      .hero-kicker {
+        max-width: 100%;
+        font-size: 11px;
+        line-height: 1.45;
+        padding: 10px 14px;
+        margin-bottom: 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 8vw, 64px);
+        line-height: 1.02;
+        margin-bottom: 14px;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+        line-height: 1.45;
+      }
+
+      .hero-description {
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 22px;
+      }
+
+      .hero-content .btn-group {
+        gap: 12px;
+      }
+
+      .hero-content .btn-group .btn {
+        flex: 1 1 calc(50% - 6px);
+        min-width: 220px;
+      }
+
+      .hero-content .trust-line,
+      .hero-card .trust-line {
+        justify-content: flex-start;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .section {
+        padding: 82px 0;
+      }
+
+      .section-title-wrap {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .facts-grid,
+      .features-grid,
+      .lifestyle-grid,
+      .form-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item,
+      .gallery-item.large {
+        min-height: 280px;
+      }
+
+      .video-carousel,
+      .image-panel img,
+      .map-panel iframe {
+        min-height: 340px;
+      }
+
+      .cta-panel {
+        padding: 36px 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(calc(100% - 20px), var(--container));
+      }
+
+      .nav-inner {
+        min-height: 72px;
+      }
+
+      .brand {
+        max-width: calc(100% - 58px);
+      }
+
+      .brand-top {
+        font-size: 24px;
+      }
+
+      .brand-bottom {
+        font-size: 14px;
+        gap: 6px;
+      }
+
+      .brand-bottom::before,
+      .brand-bottom::after {
+        min-width: 14px;
+      }
+
+      .hero {
+        padding: 22px 0 34px;
+      }
+
+      .hero-kicker {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        padding: 10px 12px;
+        margin-bottom: 16px;
+      }
+
+      .hero h1 {
+        font-size: clamp(34px, 12vw, 50px);
+        line-height: 1.03;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+        line-height: 1.75;
+        margin-bottom: 18px;
+      }
+
+      .hero-content .btn-group .btn {
+        flex: 1 1 100%;
+        min-width: 100%;
+        min-height: 48px;
+        padding: 0 18px;
+        font-size: 15px;
+      }
+
+      .hero-content .trust-line,
+      .hero-card .trust-line {
+        gap: 8px;
+        font-size: 12px;
+      }
+
+      .hero-card,
+      .text-panel,
+      .video-text,
+      .location-panel,
+      .contact-info,
+      .contact-form-wrap {
+        padding: 22px 18px;
+      }
+
+      .hero-card {
+        padding-top: 58px;
+      }
+
+      .hero-card-badge {
+        width: calc(100% - 20px);
+        min-width: 0;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        padding: 11px 14px;
+      }
+
+      .price {
+        font-size: clamp(28px, 10vw, 44px);
+      }
+
+      .commission-line {
+        font-size: 12px;
+      }
+
+      .stat-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .stat-item {
+        padding: 14px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .gallery-item,
+      .gallery-item.large {
+        min-height: 240px;
+      }
+
+      .video-carousel,
+      .image-panel img,
+      .map-panel iframe {
+        min-height: 260px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .modal-close,
+      .modal-nav {
+        width: 46px;
+        height: 46px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-top" data-i18n="brandTop">OBERASBACH</span>
+        <span class="brand-bottom" data-i18n="brandBottom">Ihr neues Zuhause</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#facts" data-i18n="navFacts">Eckdaten</a></li>
+        <li><a href="#description" data-i18n="navDescription">Objekt</a></li>
+        <li><a href="#features" data-i18n="navFeatures">Highlights</a></li>
+        <li><a href="#gallery" data-i18n="navGallery">Galerie</a></li>
+        <li><a href="#video" data-i18n="navVideo">Videos</a></li>
+        <li><a href="#location" data-i18n="navLocation">Lage</a></li>
+        <li><a href="#contact" data-i18n="navContact">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <div class="lang-switch">
+          <button class="lang-btn active" id="langDe">DE</button>
+          <button class="lang-btn" id="langEn">EN</button>
+        </div>
+        <!-- REPLACE: phone number -->
+        <a class="nav-phone" href="tel:+491234567890">+49 123 456 7890</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="navCta">Besichtigung anfragen</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <a href="#facts" data-i18n="navFacts">Eckdaten</a>
+        <a href="#description" data-i18n="navDescription">Objekt</a>
+        <a href="#features" data-i18n="navFeatures">Highlights</a>
+        <a href="#gallery" data-i18n="navGallery">Galerie</a>
+        <a href="#video" data-i18n="navVideo">Videos</a>
+        <a href="#lifestyle" data-i18n="navLifestyle">Lifestyle</a>
+        <a href="#location" data-i18n="navLocation">Lage</a>
+        <a href="#contact" data-i18n="navContact">Kontakt</a>
+        <button type="button" id="mobileLangDe">Deutsch</button>
+        <button type="button" id="mobileLangEn">English</button>
+        <!-- REPLACE: WhatsApp link -->
+        <a href="https://wa.me/491234567890" target="_blank" rel="noopener">WhatsApp</a>
+        <!-- REPLACE: phone number -->
+        <a href="tel:+491234567890" data-i18n="callNow">Jetzt anrufen</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero-media">
+      <!-- REPLACE: fallback hero image -->
+      <img class="hero-fallback-image" id="heroFallbackImage" src="assets/images/hero-fallback.jpg" alt="Luxury property hero image" />
+
+      <!-- REPLACE: hero videos -->
+      <video class="hero-video active" muted playsinline preload="auto" src="assets/videos/video-1.mp4"></video>
+      <video class="hero-video" muted playsinline preload="auto" src="assets/videos/video-2.mp4"></video>
+      <video class="hero-video" muted playsinline preload="auto" src="assets/videos/video-3.mp4"></video>
+      <video class="hero-video" muted playsinline preload="auto" src="assets/videos/video-4.mp4"></video>
+      <video class="hero-video" muted playsinline preload="auto" src="assets/videos/video-5.mp4"></video>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-kicker" data-i18n="heroKicker">Beste Familienlage • am Naturschutzgebiet • Einkauf & Schule in der Nähe</div>
+        <h1 data-i18n-html="heroTitle">Modernisierte <span class="gold">Doppelhaushälfte</span> in bester Lage von Oberasbach.</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">Direkt vom Eigentümer — provisionsfrei für Käufer.</p>
+        <p class="hero-description" data-i18n-html="heroDescription">
+          Diese hochwertig modernisierte Doppelhaushälfte vereint <span class="gold">stilvolles Design</span>, großzügiges Wohnen und die perfekte Lage für Familien. Direkt am Naturschutzgebiet gelegen und trotzdem nur wenige Gehminuten zum Lidl, zur Grundschule und Kita. Mit spa-ähnlichen Bädern, Fußbodenheizung, ausgebautem Dachgeschoss, Terrasse und Garage bietet sie Wohnqualität auf Top-Niveau nahe Fürth und Nürnberg.
+        </p>
+
+        <div class="btn-group">
+          <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">Besichtigung anfragen</a>
+          <a href="#gallery" class="btn btn-secondary" data-i18n="heroBtn2">Galerie ansehen</a>
+          <!-- REPLACE: WhatsApp link -->
+          <a href="https://wa.me/491234567890" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="heroBtn3">WhatsApp Anfrage</a>
+        </div>
+
+        <div class="trust-line">
+          <span data-i18n="trust1">Top-Wohnlage</span>
+          <span>•</span>
+          <span data-i18n="trust2">Luxusmodernisierung</span>
+          <span>•</span>
+          <span data-i18n="trust3">Bevorzugter Eindruck</span>
+        </div>
+      </div>
+
+      <aside class="hero-card glass reveal">
+        <div class="hero-card-badge" data-i18n-html="boxBadge">PROVISIONSFREI -<br> DIREKT VOM EIGENTÜMER</div>
+        <div class="label" data-i18n="askingPrice">Angebotspreis</div>
+        <div class="price">€695,000</div>
+        <div class="commission-line" data-i18n="commissionLine">Provisionsfrei für Käufer · Direktverkauf vom Eigentümer</div>
+        <div class="price-sub">€4,572 / m²</div>
+
+        <div class="stat-list">
+          <div class="stat-item">
+            <strong>152 m²</strong>
+            <span data-i18n="livingSpace">Wohnfläche</span>
+          </div>
+          <div class="stat-item">
+            <strong>233 m²</strong>
+            <span data-i18n="plotArea">Grundstück</span>
+          </div>
+          <div class="stat-item">
+            <strong>4</strong>
+            <span data-i18n="spaciousRooms">Großzügige Zimmer</span>
+          </div>
+          <div class="stat-item">
+            <strong>3+1</strong>
+            <span data-i18n="bathGuest">Bäder + Gäste-WC</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary" style="width:100%;" data-i18n="scheduleVisit">Besichtigung anfragen</a>
+
+        <div class="trust-line">
+          <span data-i18n="trust1">Top-Wohnlage</span>
+          <span>•</span>
+          <span data-i18n="trust2">Luxusmodernisierung</span>
+          <span>•</span>
+          <span data-i18n="trust3">Bevorzugter Eindruck</span>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <section class="section" id="facts">
+    <div class="top-blur"></div>
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div>
+          <div class="eyebrow" data-i18n="factsEyebrow">Eckdaten</div>
+          <h2 data-i18n-html="factsTitle">Wohnen mit <span class="gold">architektonischer Klarheit</span></h2>
+        </div>
+        <p class="lead" data-i18n="factsLead">
+          Edle Premium-Interieurs, kurze Wege im Alltag und eine Lage, die urbanen Komfort mit Natur, Ruhe und Bequemlichkeit verbindet.
+        </p>
+      </div>
+
+      <div class="facts-grid">
+        <div class="fact-card glass reveal reveal-delay-1">
+          <div class="fact-label" data-i18n="factLabel1">Lage</div>
+          <div class="fact-value">Oberasbach</div>
+          <p data-i18n="factText1">Im Landkreis Fürth, südwestlich von Nürnberg, in bevorzugter Wohnlage mit ausgezeichneter Anbindung.</p>
+        </div>
+
+        <div class="fact-card glass reveal reveal-delay-2">
+          <div class="fact-label" data-i18n="factLabel2">Preis</div>
+          <div class="fact-value">€695,000</div>
+          <p data-i18n="factText2">Starkes Premium-Angebot mit ca. €4.572 pro m² für ein aufwendig modernisiertes Zuhause.</p>
+        </div>
+
+        <div class="fact-card glass reveal reveal-delay-3">
+          <div class="fact-label" data-i18n="factLabel3">Aufteilung</div>
+          <div class="fact-value">4 Zimmer</div>
+          <p data-i18n="factText3">Großzügiges Raumkonzept über Erdgeschoss, Obergeschoss und ausgebautes Loft-Dachgeschoss.</p>
+        </div>
+
+        <div class="fact-card glass reveal">
+          <div class="fact-label" data-i18n="factLabel4">Außenbereich</div>
+          <div class="fact-value">23 m² Terrasse</div>
+          <p data-i18n="factText4">Schöne Terrasse, 233 m² Grundstück und Garage – ideal für stilvolles Indoor-Outdoor-Wohnen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="description">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div>
+          <div class="eyebrow" data-i18n="navDescription">Objekt</div>
+          <h2 data-i18n-html="descTitle">Ein Zuhause, das sich <span class="gold">weit über dem Gewöhnlichen</span> anfühlt</h2>
+        </div>
+      </div>
+
+      <div class="description-grid">
+        <div class="text-panel glass reveal">
+          <p data-i18n="descP1">
+            Dieses Objekt ist etwas Besonderes: außen absolutes Understatement, innen ein kompromissloser Ausdruck von Luxus, Komfort und moderner Architekturqualität.
+          </p>
+          <p data-i18n="descP2">
+            Das Wohnhaus wurde mit außergewöhnlichem Aufwand und viel Liebe zum Detail modernisiert. Fenster, Elektrik, Heizung, Sanitär, Küche – nahezu alle wesentlichen Komponenten wurden auf einen zeitgemäßen Premium-Standard gebracht. Lediglich kleinere Restarbeiten konnten wetterbedingt außen noch nicht final abgeschlossen werden.
+          </p>
+          <p data-i18n="descP3">
+            Die Doppelhaushälfte mit Keller bietet Raum, Licht und Luxus auf drei Ebenen in bester Lage von Oberasbach. Stilvolle Architektur trifft auf Ausstattungsqualität, die in diesem Segment selten zu finden ist: luftiges Loft-Dachgeschoss, dekorative Sichtbalken, große Fensterflächen, Premium-Fliesen, elegante Bäder und eine Traumküche mit Markengeräten.
+          </p>
+          <div class="quote-box" data-i18n="descQuote">
+            „Ein Zuhause für Käufer, die Design, Präzision, Atmosphäre und das seltene Gefühl einer vollständig durchdachten Vision schätzen.“
+          </div>
+        </div>
+
+        <div class="image-panel glass reveal">
+          <!-- REPLACE: description section image -->
+          <img src="assets/images/description-image.jpg" alt="Luxury interior living concept" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="bottom-blur"></div>
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div>
+          <div class="eyebrow" data-i18n="navFeatures">Highlights</div>
+          <h2 data-i18n-html="featuresTitle">Kuratiertes Premium-Design in <span class="gold">jeder Ebene des Hauses</span></h2>
+        </div>
+        <p class="lead" data-i18n="featuresLead">
+          Gemacht für Käufer, die mehr als Quadratmeter suchen: Atmosphäre, Komfort und ein wirklich gehobenes Wohnerlebnis.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card glass reveal">
+          <div class="feature-icon">⌂</div>
+          <h3 data-i18n="feature1Title">Loft-Dachgeschoss</h3>
+          <p data-i18n="feature1Text">Ausgebautes Dachgeschoss mit großzügigen Fenstern, heller Galerie, dekorativen Sichtbalken und offenem Raumgefühl bis in die Spitze.</p>
+        </article>
+
+        <article class="feature-card glass reveal reveal-delay-1">
+          <div class="feature-icon">♨</div>
+          <h3 data-i18n="feature2Title">Fußbodenheizung</h3>
+          <p data-i18n="feature2Text">Umfassende Fußbodenheizung im gesamten Haus für stilvolle Wärme und maximalen Wohnkomfort.</p>
+        </article>
+
+        <article class="feature-card glass reveal reveal-delay-2">
+          <div class="feature-icon">✦</div>
+          <h3 data-i18n="feature3Title">Designerküche</h3>
+          <p data-i18n="feature3Text">Traumhafte Premiumküche mit hochwertigen Marken-Einbaugeräten und elegantem, modernem Luxus-Finish.</p>
+        </article>
+
+        <article class="feature-card glass reveal">
+          <div class="feature-icon">🛁</div>
+          <h3 data-i18n="feature4Title">Spa-ähnliche Bäder</h3>
+          <p data-i18n="feature4Text">Drei elegante Bäder mit begehbaren Regenduschen, Designer-Armaturen und hochwertigen Fliesen sowie separates Gäste-WC.</p>
+        </article>
+
+        <article class="feature-card glass reveal reveal-delay-1">
+          <div class="feature-icon">▦</div>
+          <h3 data-i18n="feature5Title">Premium-Materialien</h3>
+          <p data-i18n="feature5Text">Überwiegend dekorative großformatige Bodenfliesen sorgen für eine durchgehend hochwertige Ästhetik.</p>
+        </article>
+
+        <article class="feature-card glass reveal reveal-delay-2">
+          <div class="feature-icon">☀</div>
+          <h3 data-i18n="feature6Title">Terrasse & Garage</h3>
+          <p data-i18n="feature6Text">Schöne Terrasse mit ca. 23 m² sowie eine Garage runden das luxuriöse und praktische Gesamtbild ab.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div>
+          <div class="eyebrow" data-i18n="navGallery">Galerie</div>
+          <h2 data-i18n-html="galleryTitle">Visuelle Eindrücke einer <span class="gold">Premium-Immobilie</span></h2>
+        </div>
+        <p class="lead" data-i18n="galleryLead">
+          Ersetzen Sie die Beispielbilder unten durch Ihre echten Innen- und Außenaufnahmen für maximale Emotion und Conversion.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- REPLACE: gallery images -->
+        <div class="gallery-item large reveal" data-image="assets/images/gallery-1.jpg" data-caption="Wohnbereich">
+          <img src="assets/images/gallery-1.jpg" alt="Luxury living room" />
+          <div class="caption"><span data-i18n="galleryCap1">Wohnbereich</span><span data-i18n="openImage">Bild öffnen ↗</span></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-image="assets/images/gallery-2.jpg" data-caption="Designerküche">
+          <img src="assets/images/gallery-2.jpg" alt="Designer kitchen" />
+          <div class="caption"><span data-i18n="galleryCap2">Küche</span><span data-i18n="openImage">Bild öffnen ↗</span></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-image="assets/images/gallery-3.jpg" data-caption="Luxusbadezimmer">
+          <img src="assets/images/gallery-3.jpg" alt="Luxury bathroom" />
+          <div class="caption"><span data-i18n="galleryCap3">Bad</span><span data-i18n="openImage">Bild öffnen ↗</span></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-image="assets/images/gallery-4.jpg" data-caption="Schlafzimmer">
+          <img src="assets/images/gallery-4.jpg" alt="Premium bedroom" />
+          <div class="caption"><span data-i18n="galleryCap4">Schlafzimmer</span><span data-i18n="openImage">Bild öffnen ↗</span></div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-image="assets/images/gallery-5.jpg" data-caption="Terrasse / Außenbereich">
+          <img src="assets/images/gallery-5.jpg" alt="Terrace exterior" />
+          <div class="caption"><span data-i18n="galleryCap5">Terrasse</span><span data-i18n="openImage">Bild öffnen ↗</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-footer reveal">
+        <p data-i18n="galleryFooter">Fügen Sie hier Ihre stärksten Außen-, Küchen-, Wohn-, Bad-, Dachgeschoss-, Terrassen- und Detailaufnahmen ein.</p>
+        <a href="#contact" class="btn btn-secondary" data-i18n="galleryBtn">Komplette Fotostrecke anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="video">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div>
+          <div class="eyebrow" data-i18n="navVideo">Videos</div>
+          <h2 data-i18n-html="videoTitle">Bringen Sie die Immobilie mit <span class="gold">Bewegung und Atmosphäre</span> zum Leben</h2>
+        </div>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-box reveal">
+          <div class="video-carousel" id="propertyVideoCarousel">
+            <div class="video-carousel-badge" data-i18n="videoBadge">Video Showcase</div>
+
+            <!-- REPLACE: fallback image for video section -->
+            <img class="video-carousel-fallback" id="videoSectionFallback" src="assets/images/video-poster.jpg" alt="Property video fallback image" />
+
+            <!-- REPLACE: section videos -->
+            <video class="video-carousel-item active" muted playsinline preload="auto" src="assets/videos/video-5.mp4"></video>
+            <video class="video-carousel-item" muted playsinline preload="auto" src="assets/videos/video-4.mp4"></video>
+            <video class="video-carousel-item" muted playsinline preload="auto" src="assets/videos/video-3.mp4"></video>
+            <video class="video-carousel-item" muted playsinline preload="auto" src="assets/videos/video-2.mp4"></video>
+            <video class="video-carousel-item" muted playsinline preload="auto" src="assets/videos/video-1.mp4"></video>
+
+            <div class="video-carousel-overlay"></div>
+          </div>
+        </div>
+
+        <div class="video-text glass reveal">
+          <h3 data-i18n="videoTextTitle">Ihre echte Objektpräsentation hier einbinden</h3>
+          <p data-i18n="videoTextP">
+            Zeigen Sie hier Ihre besten Listing-Videos, cineastischen Clips, Drohnenaufnahmen oder Innenraum-Walkthroughs. Videos erhöhen Verweildauer, Vertrauen und den wahrgenommenen Wert der Immobilie deutlich.
+          </p>
+          <ul class="video-list">
+            <li data-i18n="videoList1">Beginnen Sie mit einer cineastischen Außenansicht und Ankunftsszene</li>
+            <li data-i18n="videoList2">Zeigen Sie Designerküche, Bäder und Lichtstimmung</li>
+            <li data-i18n="videoList3">Binden Sie Loft-Dachgeschoss, Terrasse und Umfeld mit ein</li>
+            <li data-i18n="videoList4">Untertitel oder dezente Musik verstärken den Premium-Eindruck</li>
+          </ul>
+          <div class="btn-group">
+            <a href="#contact" class="btn btn-primary" data-i18n="videoBtn1">Besichtigung anfragen</a>
+            <!-- REPLACE: WhatsApp link -->
+            <a href="https://wa.me/491234567890" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="videoBtn2">Per WhatsApp fragen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="lifestyle">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div>
+          <div class="eyebrow" data-i18n="navLifestyle">Lifestyle</div>
+          <h2 data-i18n-html="lifeTitle">Lebensqualität mit <span class="gold">kurzen Wegen und hoher Qualität</span></h2>
+        </div>
+        <p class="lead" data-i18n="lifeLead">
+          Ein Standortkonzept, das Komfort, Familienfreundlichkeit, Natur und direkten Zugang zu Fürth und Nürnberg elegant verbindet.
+        </p>
+      </div>
+
+      <div class="lifestyle-grid">
+        <article class="lifestyle-card glass reveal">
+          <div class="lifestyle-number" data-i18n="lifeNum1">01 — Alltagskomfort</div>
+          <h3 data-i18n="lifeTitle1">Alles Angenehme in direkter Nähe</h3>
+          <p data-i18n="lifeText1">Geschäfte, Discounter, Bäckereien und Dinge des täglichen Bedarfs sind bequem fußläufig erreichbar.</p>
+        </article>
+
+        <article class="lifestyle-card glass reveal reveal-delay-1">
+          <div class="lifestyle-number" data-i18n="lifeNum2">02 — Natur & Balance</div>
+          <h3 data-i18n="lifeTitle2">Grünflächen direkt vor der Tür</h3>
+          <p data-i18n="lifeText2">Naturschutzgebiet, Spazier- und Radwege liegen in unmittelbarer Nähe und bieten Ruhe und Erholung.</p>
+        </article>
+
+        <article class="lifestyle-card glass reveal reveal-delay-2">
+          <div class="lifestyle-number" data-i18n="lifeNum3">03 — Familie & Anbindung</div>
+          <h3 data-i18n="lifeTitle3">Schulen, Kita und Verkehr</h3>
+          <p data-i18n="lifeText3">Grundschule, Kindertagesstätten und weiterführende Schulen sind nah, ebenso der gute Anschluss an Fürth und Nürnberg.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="location">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div>
+          <div class="eyebrow" data-i18n="navLocation">Lage</div>
+          <h2 data-i18n-html="locationTitle">Bevorzugte Wohnlage in <span class="gold">Oberasbach</span></h2>
+        </div>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-panel glass reveal">
+          <h3 data-i18n="locationSub">Zwischen urbaner Anbindung und ruhigem Wohnen</h3>
+          <p data-i18n="locationP1">
+            Gelegen im Landkreis Fürth, südwestlich von Nürnberg, profitiert diese Immobilie von einer Adresse, die komfortables Rundum-Wohnen mit kurzen Wegen ermöglicht.
+          </p>
+          <p data-i18n="locationP2">
+            Einkaufsmöglichkeiten, Bäckereien, Schulen, Kindergärten, Natur sowie starke Mobilitätsanbindungen – inklusive hervorragender Verbindung nach Nürnberg, Fürth und zur Südwesttangente – befinden sich im direkten Umfeld.
+          </p>
+
+          <ul class="location-list">
+            <li data-i18n="locationLi1">Bevorzugte Lage in Oberasbach</li>
+            <li data-i18n="locationLi2">Nähe zu Fürth und Nürnberg</li>
+            <li data-i18n="locationLi3">Naturschutzgebiet mit Spazier- und Radwegen in direkter Nähe</li>
+            <li data-i18n="locationLi4">Schulen und Kindertagesstätten im Umfeld</li>
+            <li data-i18n="locationLi5">Gute ÖPNV-Anbindung</li>
+            <li data-i18n="locationLi6">Sehr gute Straßenanbindung in die Region</li>
+          </ul>
+        </div>
+
+        <div class="map-panel glass reveal">
+          <!-- REPLACE: map embed / location -->
+          <iframe
+            src="https://www.google.com/maps?q=Oberasbach%20Germany&z=13&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map of Oberasbach">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div>
+          <div class="eyebrow" data-i18n="navContact">Kontakt</div>
+          <h2 data-i18n-html="contactTitle">Exposé oder <span class="gold">private Besichtigung</span> anfragen</h2>
+        </div>
+        <p class="lead" data-i18n="contactLead">
+          Nutzen Sie das Formular unten, um Informationen zum Objekt, die vollständige Galerie, Videos oder einen persönlichen Termin anzufragen.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info glass reveal">
+          <h3 data-i18n="contactInfoTitle">Direkter Kontakt</h3>
+          <p data-i18n="contactInfoText">
+            Für ernsthafte Interessenten schafft schnelle Kommunikation Vertrauen. Fügen Sie unten Ihre echten Kontaktdaten hinzu und verbinden Sie das Formular mit Ihrem bevorzugten E-Mail- oder CRM-Workflow.
+          </p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <small data-i18n="contactPhone">Telefon</small>
+              <!-- REPLACE: phone number -->
+              <a href="tel:+491234567890">+49 123 456 7890</a>
+            </div>
+
+            <div class="contact-card">
+              <small>WhatsApp</small>
+              <!-- REPLACE: WhatsApp link -->
+              <a href="https://wa.me/491234567890" target="_blank" rel="noopener" data-i18n="contactWhatsApp">WhatsApp Chat starten</a>
+            </div>
+
+            <div class="contact-card">
+              <small data-i18n="contactEmail">E-Mail</small>
+              <!-- REPLACE: email -->
+              <a href="mailto:info@example.com">info@example.com</a>
+            </div>
+
+            <div class="contact-card">
+              <small data-i18n="contactAvailability">Verfügbarkeit</small>
+              <span data-i18n="contactAvailabilityValue">Besichtigungen nach Vereinbarung</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap glass reveal">
+          <!-- REPLACE: form action -->
+          <form action="https://example.com/form-handler" method="post">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name" data-i18n="formName">Vollständiger Name</label>
+                <input type="text" id="name" name="name" placeholder="Ihr vollständiger Name" required />
+              </div>
+
+              <div class="field">
+                <label for="phone" data-i18n="formPhone">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" placeholder="+49 ..." required />
+              </div>
+
+              <div class="field">
+                <label for="email" data-i18n="formEmail">E-Mail-Adresse</label>
+                <input type="email" id="email" name="email" placeholder="sie@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="interest" data-i18n="formInterest">Interesse</label>
+                <select id="interest" name="interest">
+                  <option value="viewing" data-i18n="opt1">Besichtigung anfragen</option>
+                  <option value="expose" data-i18n="opt2">Exposé anfragen</option>
+                  <option value="video" data-i18n="opt3">Videos anfragen</option>
+                  <option value="callback" data-i18n="opt4">Rückruf erwünscht</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="message" data-i18n="formMessage">Nachricht</label>
+                <textarea id="message" name="message" placeholder="Ich interessiere mich für die Immobilie in Oberasbach und möchte gerne weitere Informationen erhalten..."></textarea>
+              </div>
+            </div>
+
+            <div class="btn-group" style="margin-top:20px;">
+              <button type="submit" class="btn btn-primary" data-i18n="formSubmit">Anfrage senden</button>
+              <!-- REPLACE: WhatsApp link -->
+              <a href="https://wa.me/491234567890" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="formWhatsApp">Stattdessen WhatsApp</a>
+            </div>
+
+            <p class="form-note" data-i18n="formNote">
+              Mit dem Absenden erklären Sie sich einverstanden, dass Ihre Kontaktdaten zur Bearbeitung Ihrer Anfrage verwendet werden.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="container">
+      <div class="cta-panel glass reveal">
+        <div class="eyebrow" style="justify-content:center;" data-i18n="ctaEyebrow">Finaler Call-to-Action</div>
+        <h2 data-i18n-html="ctaTitle">Sichern Sie sich ein Zuhause mit <span class="gold">Luxus, Design und Lagequalität</span></h2>
+        <p data-i18n="ctaText">
+          Für Käufer, die eine modernisierte Premium-Immobilie nahe Fürth und Nürnberg suchen, bietet dieses Oberasbacher Zuhause eine seltene Kombination aus Atmosphäre, Alltagstauglichkeit und beständigem Wert.
+        </p>
+        <div class="btn-group" style="justify-content:center;">
+          <a href="#contact" class="btn btn-primary" data-i18n="ctaBtn1">Private Besichtigung vereinbaren</a>
+          <!-- REPLACE: phone number -->
+          <a href="tel:+491234567890" class="btn btn-secondary" data-i18n="ctaBtn2">Jetzt anrufen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        © <span id="year"></span> Oberasbach Residence. <span data-i18n="footerRights">Alle Rechte vorbehalten.</span>
+      </div>
+
+      <div class="footer-links">
+        <!-- REPLACE: footer links / legal pages -->
+        <a href="#" data-i18n="footerImprint">Impressum</a>
+        <a href="#" data-i18n="footerPrivacy">Datenschutz</a>
+        <a href="#contact" data-i18n="navContact">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="galleryModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close gallery">✕</button>
+      <button class="modal-nav prev" id="modalPrev" aria-label="Previous image">‹</button>
+      <img src="" alt="Gallery image" id="modalImage" />
+      <button class="modal-nav next" id="modalNext" aria-label="Next image">›</button>
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- REPLACE: WhatsApp link -->
+  <a class="floating-wa" href="https://wa.me/491234567890" target="_blank" rel="noopener" aria-label="Open WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M19.11 17.23c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.18-1.35-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.45-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28 0 1.34.98 2.64 1.11 2.82.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.55.58.65.21 1.24.18 1.7.11.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 3.2c-7.06 0-12.78 5.72-12.78 12.78 0 2.25.59 4.45 1.71 6.39L3.2 28.8l6.6-1.72a12.73 12.73 0 0 0 6.22 1.59h.01c7.05 0 12.77-5.72 12.77-12.78 0-3.42-1.33-6.63-3.75-9.05A12.68 12.68 0 0 0 16.02 3.2zm0 23.31h-.01a10.54 10.54 0 0 1-5.37-1.47l-.39-.23-3.91 1.02 1.04-3.81-.25-.39a10.56 10.56 0 1 1 8.89 4.88z"/>
+    </svg>
+  </a>
+
+  <script>
+    const translations = {
+      de: {
+        pageTitle: "Modernisierte Doppelhaushälfte in Oberasbach | Nähe Fürth & Nürnberg",
+        pageDescription: "Modernisierte Doppelhaushälfte in Oberasbach bei Fürth / Nürnberg. 4 Zimmer, 152 m² Wohnfläche, 233 m² Grundstück, hochwertige Ausstattung, Designerküche, spa-ähnliche Bäder, Terrasse und Garage.",
+        brandTop: "OBERASBACH",
+        brandBottom: "Ihr neues Zuhause",
+        navFacts: "Eckdaten",
+        navDescription: "Objekt",
+        navFeatures: "Highlights",
+        navGallery: "Galerie",
+        navVideo: "Videos",
+        navLifestyle: "Lifestyle",
+        navLocation: "Lage",
+        navContact: "Kontakt",
+        navCta: "Besichtigung anfragen",
+        callNow: "Jetzt anrufen",
+        heroKicker: "Beste Familienlage • am Naturschutzgebiet • Einkauf & Schule in der Nähe",
+        heroTitle: 'Modernisierte <span class="gold">Doppelhaushälfte</span> in bester Lage von Oberasbach.',
+        heroSubtitle: "Direkt vom Eigentümer — provisionsfrei für Käufer.",
+        heroDescription: 'Diese hochwertig modernisierte Doppelhaushälfte vereint <span class="gold">stilvolles Design</span>, großzügiges Wohnen und die perfekte Lage für Familien. Direkt am Naturschutzgebiet gelegen und trotzdem nur wenige Gehminuten zum Lidl, zur Grundschule und Kita. Mit spa-ähnlichen Bädern, Fußbodenheizung, ausgebautem Dachgeschoss, Terrasse und Garage bietet sie Wohnqualität auf Top-Niveau nahe Fürth und Nürnberg.',
+        heroBtn1: "Besichtigung anfragen",
+        heroBtn2: "Galerie ansehen",
+        heroBtn3: "WhatsApp Anfrage",
+        askingPrice: "Angebotspreis",
+        boxBadge: "PROVISIONSFREI -<br> DIREKT VOM EIGENTÜMER",
+        commissionLine: "Provisionsfrei für Käufer · Direktverkauf vom Eigentümer",
+        livingSpace: "Wohnfläche",
+        plotArea: "Grundstück",
+        spaciousRooms: "Großzügige Zimmer",
+        bathGuest: "Bäder + Gäste-WC",
+        scheduleVisit: "Besichtigung anfragen",
+        trust1: "Top-Wohnlage",
+        trust2: "Luxusmodernisierung",
+        trust3: "Bevorzugter Eindruck",
+        factsEyebrow: "Eckdaten",
+        factsTitle: 'Wohnen mit <span class="gold">architektonischer Klarheit</span>',
+        factsLead: "Edle Premium-Interieurs, kurze Wege im Alltag und eine Lage, die urbanen Komfort mit Natur, Ruhe und Bequemlichkeit verbindet.",
+        factLabel1: "Lage",
+        factText1: "Im Landkreis Fürth, südwestlich von Nürnberg, in bevorzugter Wohnlage mit ausgezeichneter Anbindung.",
+        factLabel2: "Preis",
+        factText2: "Starkes Premium-Angebot mit ca. €4.572 pro m² für ein aufwendig modernisiertes Zuhause.",
+        factLabel3: "Aufteilung",
+        factText3: "Großzügiges Raumkonzept über Erdgeschoss, Obergeschoss und ausgebautes Loft-Dachgeschoss.",
+        factLabel4: "Außenbereich",
+        factText4: "Schöne Terrasse, 233 m² Grundstück und Garage – ideal für stilvolles Indoor-Outdoor-Wohnen.",
+        descTitle: 'Ein Zuhause, das sich <span class="gold">weit über dem Gewöhnlichen</span> anfühlt',
+        descP1: "Dieses Objekt ist etwas Besonderes: außen absolutes Understatement, innen ein kompromissloser Ausdruck von Luxus, Komfort und moderner Architekturqualität.",
+        descP2: "Das Wohnhaus wurde mit außergewöhnlichem Aufwand und viel Liebe zum Detail modernisiert. Fenster, Elektrik, Heizung, Sanitär, Küche – nahezu alle wesentlichen Komponenten wurden auf einen zeitgemäßen Premium-Standard gebracht. Lediglich kleinere Restarbeiten konnten wetterbedingt außen noch nicht final abgeschlossen werden.",
+        descP3: "Die Doppelhaushälfte mit Keller bietet Raum, Licht und Luxus auf drei Ebenen in bester Lage von Oberasbach. Stilvolle Architektur trifft auf Ausstattungsqualität, die in diesem Segment selten zu finden ist: luftiges Loft-Dachgeschoss, dekorative Sichtbalken, große Fensterflächen, Premium-Fliesen, elegante Bäder und eine Traumküche mit Markengeräten.",
+        descQuote: "„Ein Zuhause für Käufer, die Design, Präzision, Atmosphäre und das seltene Gefühl einer vollständig durchdachten Vision schätzen.“",
+        featuresTitle: 'Kuratiertes Premium-Design in <span class="gold">jeder Ebene des Hauses</span>',
+        featuresLead: "Gemacht für Käufer, die mehr als Quadratmeter suchen: Atmosphäre, Komfort und ein wirklich gehobenes Wohnerlebnis.",
+        feature1Title: "Loft-Dachgeschoss",
+        feature1Text: "Ausgebautes Dachgeschoss mit großzügigen Fenstern, heller Galerie, dekorativen Sichtbalken und offenem Raumgefühl bis in die Spitze.",
+        feature2Title: "Fußbodenheizung",
+        feature2Text: "Umfassende Fußbodenheizung im gesamten Haus für stilvolle Wärme und maximalen Wohnkomfort.",
+        feature3Title: "Designerküche",
+        feature3Text: "Traumhafte Premiumküche mit hochwertigen Marken-Einbaugeräten und elegantem, modernem Luxus-Finish.",
+        feature4Title: "Spa-ähnliche Bäder",
+        feature4Text: "Drei elegante Bäder mit begehbaren Regenduschen, Designer-Armaturen und hochwertigen Fliesen sowie separates Gäste-WC.",
+        feature5Title: "Premium-Materialien",
+        feature5Text: "Überwiegend dekorative großformatige Bodenfliesen sorgen für eine durchgehend hochwertige Ästhetik.",
+        feature6Title: "Terrasse & Garage",
+        feature6Text: "Schöne Terrasse mit ca. 23 m² sowie eine Garage runden das luxuriöse und praktische Gesamtbild ab.",
+        galleryTitle: 'Visuelle Eindrücke einer <span class="gold">Premium-Immobilie</span>',
+        galleryLead: "Ersetzen Sie die Beispielbilder unten durch Ihre echten Innen- und Außenaufnahmen für maximale Emotion und Conversion.",
+        galleryCap1: "Wohnbereich",
+        galleryCap2: "Küche",
+        galleryCap3: "Bad",
+        galleryCap4: "Schlafzimmer",
+        galleryCap5: "Terrasse",
+        openImage: "Bild öffnen ↗",
+        galleryFooter: "Fügen Sie hier Ihre stärksten Außen-, Küchen-, Wohn-, Bad-, Dachgeschoss-, Terrassen- und Detailaufnahmen ein.",
+        galleryBtn: "Komplette Fotostrecke anfragen",
+        videoTitle: 'Bringen Sie die Immobilie mit <span class="gold">Bewegung und Atmosphäre</span> zum Leben',
+        videoBadge: "Video Showcase",
+        videoTextTitle: "Ihre echte Objektpräsentation hier einbinden",
+        videoTextP: "Zeigen Sie hier Ihre besten Listing-Videos, cineastischen Clips, Drohnenaufnahmen oder Innenraum-Walkthroughs. Videos erhöhen Verweildauer, Vertrauen und den wahrgenommenen Wert der Immobilie deutlich.",
+        videoList1: "Beginnen Sie mit einer cineastischen Außenansicht und Ankunftsszene",
+        videoList2: "Zeigen Sie Designerküche, Bäder und Lichtstimmung",
+        videoList3: "Binden Sie Loft-Dachgeschoss, Terrasse und Umfeld mit ein",
+        videoList4: "Untertitel oder dezente Musik verstärken den Premium-Eindruck",
+        videoBtn1: "Besichtigung anfragen",
+        videoBtn2: "Per WhatsApp fragen",
+        lifeTitle: 'Lebensqualität mit <span class="gold">kurzen Wegen und hoher Qualität</span>',
+        lifeLead: "Ein Standortkonzept, das Komfort, Familienfreundlichkeit, Natur und direkten Zugang zu Fürth und Nürnberg elegant verbindet.",
+        lifeNum1: "01 — Alltagskomfort",
+        lifeTitle1: "Alles Angenehme in direkter Nähe",
+        lifeText1: "Geschäfte, Discounter, Bäckereien und Dinge des täglichen Bedarfs sind bequem fußläufig erreichbar.",
+        lifeNum2: "02 — Natur & Balance",
+        lifeTitle2: "Grünflächen direkt vor der Tür",
+        lifeText2: "Naturschutzgebiet, Spazier- und Radwege liegen in unmittelbarer Nähe und bieten Ruhe und Erholung.",
+        lifeNum3: "03 — Familie & Anbindung",
+        lifeTitle3: "Schulen, Kita und Verkehr",
+        lifeText3: "Grundschule, Kindertagesstätten und weiterführende Schulen sind nah, ebenso der gute Anschluss an Fürth und Nürnberg.",
+        locationTitle: 'Bevorzugte Wohnlage in <span class="gold">Oberasbach</span>',
+        locationSub: "Zwischen urbaner Anbindung und ruhigem Wohnen",
+        locationP1: "Gelegen im Landkreis Fürth, südwestlich von Nürnberg, profitiert diese Immobilie von einer Adresse, die komfortables Rundum-Wohnen mit kurzen Wegen ermöglicht.",
+        locationP2: "Einkaufsmöglichkeiten, Bäckereien, Schulen, Kindergärten, Natur sowie starke Mobilitätsanbindungen – inklusive hervorragender Verbindung nach Nürnberg, Fürth und zur Südwesttangente – befinden sich im direkten Umfeld.",
+        locationLi1: "Bevorzugte Lage in Oberasbach",
+        locationLi2: "Nähe zu Fürth und Nürnberg",
+        locationLi3: "Naturschutzgebiet mit Spazier- und Radwegen in direkter Nähe",
+        locationLi4: "Schulen und Kindertagesstätten im Umfeld",
+        locationLi5: "Gute ÖPNV-Anbindung",
+        locationLi6: "Sehr gute Straßenanbindung in die Region",
+        contactTitle: 'Exposé oder <span class="gold">private Besichtigung</span> anfragen',
+        contactLead: "Nutzen Sie das Formular unten, um Informationen zum Objekt, die vollständige Galerie, Videos oder einen persönlichen Termin anzufragen.",
+        contactInfoTitle: "Direkter Kontakt",
+        contactInfoText: "Für ernsthafte Interessenten schafft schnelle Kommunikation Vertrauen. Fügen Sie unten Ihre echten Kontaktdaten hinzu und verbinden Sie das Formular mit Ihrem bevorzugten E-Mail- oder CRM-Workflow.",
+        contactPhone: "Telefon",
+        contactWhatsApp: "WhatsApp Chat starten",
+        contactEmail: "E-Mail",
+        contactAvailability: "Verfügbarkeit",
+        contactAvailabilityValue: "Besichtigungen nach Vereinbarung",
+        formName: "Vollständiger Name",
+        formPhone: "Telefonnummer",
+        formEmail: "E-Mail-Adresse",
+        formInterest: "Interesse",
+        opt1: "Besichtigung anfragen",
+        opt2: "Exposé anfragen",
+        opt3: "Videos anfragen",
+        opt4: "Rückruf erwünscht",
+        formMessage: "Nachricht",
+        formSubmit: "Anfrage senden",
+        formWhatsApp: "Stattdessen WhatsApp",
+        formNote: "Mit dem Absenden erklären Sie sich einverstanden, dass Ihre Kontaktdaten zur Bearbeitung Ihrer Anfrage verwendet werden.",
+        ctaEyebrow: "Finaler Call-to-Action",
+        ctaTitle: 'Sichern Sie sich ein Zuhause mit <span class="gold">Luxus, Design und Lagequalität</span>',
+        ctaText: "Für Käufer, die eine modernisierte Premium-Immobilie nahe Fürth und Nürnberg suchen, bietet dieses Oberasbacher Zuhause eine seltene Kombination aus Atmosphäre, Alltagstauglichkeit und beständigem Wert.",
+        ctaBtn1: "Private Besichtigung vereinbaren",
+        ctaBtn2: "Jetzt anrufen",
+        footerRights: "Alle Rechte vorbehalten.",
+        footerImprint: "Impressum",
+        footerPrivacy: "Datenschutz"
+      },
+      en: {
+        pageTitle: "Modernized Semi-Detached House in Oberasbach | Near Fürth & Nürnberg",
+        pageDescription: "Modernized semi-detached house for sale in Oberasbach near Fürth / Nürnberg. 4 rooms, 152 m² living space, 233 m² plot, premium finishes, designer kitchen, spa-like bathrooms, terrace and garage.",
+        brandTop: "OBERASBACH",
+        brandBottom: "Your new home",
+        navFacts: "Key Facts",
+        navDescription: "Property",
+        navFeatures: "Highlights",
+        navGallery: "Gallery",
+        navVideo: "Videos",
+        navLifestyle: "Lifestyle",
+        navLocation: "Location",
+        navContact: "Contact",
+        navCta: "Request Viewing",
+        callNow: "Call Now",
+        heroKicker: "Top family location • adjacent to nature reserve • shopping & school within walking distance",
+        heroTitle: 'Modernized <span class="gold">semi-detached house</span> in prime Oberasbach location.',
+        heroSubtitle: "Directly from owner — no buyer’s commission.",
+        heroDescription: 'This high-quality, modernized semi-detached house combines <span class="gold">stylish design</span>, spacious living, and the perfect location for families. Directly adjacent to a nature reserve and still only a short walk to Lidl, elementary school, and daycare. With spa-like bathrooms, underfloor heating, converted attic, terrace, and garage, it offers top-level living quality near Fürth and Nuremberg.',
+        heroBtn1: "Request Viewing",
+        heroBtn2: "View Gallery",
+        heroBtn3: "WhatsApp Inquiry",
+        askingPrice: "Asking Price",
+        boxBadge: "NO COMMISSION -<br> DIRECTLY FROM OWNER",
+        commissionLine: "No commission for buyers · Private sale from owner",
+        livingSpace: "Living area",
+        plotArea: "Plot",
+        spaciousRooms: "Spacious rooms",
+        bathGuest: "Baths + guest WC",
+        scheduleVisit: "Request Viewing",
+        trust1: "Prime location",
+        trust2: "Luxury modernization",
+        trust3: "Premium impression",
+        factsEyebrow: "Key Facts",
+        factsTitle: 'Living with <span class="gold">architectural clarity</span>',
+        factsLead: "Refined premium interiors, short daily distances, and a location that blends urban comfort with nature, calm, and convenience.",
+        factLabel1: "Location",
+        factText1: "In the district of Fürth, southwest of Nuremberg, in a preferred residential setting with excellent connections.",
+        factLabel2: "Price",
+        factText2: "Strong premium proposition at approx. €4,572 per m² for an extensively modernized home.",
+        factLabel3: "Layout",
+        factText3: "Generous living concept across ground floor, upper floor, and converted loft attic.",
+        factLabel4: "Outdoor area",
+        factText4: "Beautiful terrace, 233 m² plot, and garage – ideal for stylish indoor-outdoor living.",
+        descTitle: 'A home that feels <span class="gold">far beyond ordinary</span>',
+        descP1: "This property is something special: understated on the outside, yet inside a bold expression of luxury, comfort, and modern architectural quality.",
+        descP2: "The house was modernized with exceptional effort and a remarkable eye for detail. Windows, electrics, heating, plumbing, kitchen – nearly all major components were brought to a contemporary premium standard. Only a few small outdoor tasks remain due to weather conditions.",
+        descP3: "The semi-detached house with basement offers space, light, and luxury across three levels in a prime Oberasbach location. Stylish architecture meets equipment rarely found in this segment: airy loft attic, decorative exposed beams, large windows, premium tile finishes, elegant bathrooms, and a dream kitchen with branded appliances.",
+        descQuote: "“A home for buyers who appreciate design, precision, atmosphere, and the rare feeling of a fully realized vision.”",
+        featuresTitle: 'Curated premium design on <span class="gold">every level of the house</span>',
+        featuresLead: "Created for buyers who seek more than square meters: atmosphere, comfort, and a truly elevated living experience.",
+        feature1Title: "Loft attic",
+        feature1Text: "Converted attic with generous windows, bright gallery, decorative exposed beams, and open spatial feeling to the top.",
+        feature2Title: "Underfloor heating",
+        feature2Text: "Comprehensive underfloor heating throughout the house for elegant warmth and maximum living comfort.",
+        feature3Title: "Designer kitchen",
+        feature3Text: "Dream premium kitchen with branded built-in appliances and an elegant modern luxury finish.",
+        feature4Title: "Spa-like bathrooms",
+        feature4Text: "Three elegant bathrooms with walk-in rain showers, designer fittings, and high-quality tiles, plus a separate guest WC.",
+        feature5Title: "Premium materials",
+        feature5Text: "Predominantly decorative large-format floor tiles create a consistently high-end aesthetic.",
+        feature6Title: "Terrace & garage",
+        feature6Text: "A beautiful terrace of approx. 23 m² and a garage complete the luxurious and practical overall package.",
+        galleryTitle: 'Visual impressions of a <span class="gold">premium property</span>',
+        galleryLead: "Replace the sample images below with your real interior and exterior photos for maximum emotion and conversion.",
+        galleryCap1: "Living area",
+        galleryCap2: "Kitchen",
+        galleryCap3: "Bathroom",
+        galleryCap4: "Bedroom",
+        galleryCap5: "Terrace",
+        openImage: "Open image ↗",
+        galleryFooter: "Add your strongest exterior, kitchen, living, bathroom, attic loft, terrace, and detail shots here.",
+        galleryBtn: "Request full photo set",
+        videoTitle: 'Bring the property to life with <span class="gold">motion and atmosphere</span>',
+        videoBadge: "Video Showcase",
+        videoTextTitle: "Use your real property presentation here",
+        videoTextP: "Show your best listing videos, cinematic clips, drone footage, or interior walkthroughs here. Video strongly increases time-on-page, trust, and perceived value.",
+        videoList1: "Start with a cinematic exterior arrival sequence",
+        videoList2: "Show the designer kitchen, bathrooms, and lighting mood",
+        videoList3: "Include the loft attic, terrace, and surroundings",
+        videoList4: "Subtitles or soft music strengthen the premium impression",
+        videoBtn1: "Request Viewing",
+        videoBtn2: "Ask via WhatsApp",
+        lifeTitle: 'Lifestyle with <span class="gold">short distances and high quality</span>',
+        lifeLead: "A location concept that elegantly combines convenience, family friendliness, nature, and direct access to Fürth and Nuremberg.",
+        lifeNum1: "01 — Everyday comfort",
+        lifeTitle1: "Everything pleasant nearby",
+        lifeText1: "Shops, discounters, bakeries, and everyday essentials are easily reachable on foot.",
+        lifeNum2: "02 — Nature & balance",
+        lifeTitle2: "Green space next door",
+        lifeText2: "Nature reserve, walking paths, and cycling routes are nearby and offer calm and recreation.",
+        lifeNum3: "03 — Family & mobility",
+        lifeTitle3: "Schools, daycare, and transport",
+        lifeText3: "Primary school, daycare centers, and secondary schools are close, along with excellent connections to Fürth and Nuremberg.",
+        locationTitle: 'Preferred residential location in <span class="gold">Oberasbach</span>',
+        locationSub: "Between urban access and peaceful living",
+        locationP1: "Located in the district of Fürth, southwest of Nuremberg, this property benefits from an address that enables comfortable all-round living with short distances.",
+        locationP2: "Shopping, bakeries, schools, daycare, nature, and strong transport links – including excellent access to Nuremberg, Fürth, and the Südwesttangente – are all nearby.",
+        locationLi1: "Preferred location in Oberasbach",
+        locationLi2: "Near Fürth and Nuremberg",
+        locationLi3: "Nature reserve with walking and cycling paths nearby",
+        locationLi4: "Schools and daycare nearby",
+        locationLi5: "Good public transport connections",
+        locationLi6: "Very good road connections across the region",
+        contactTitle: 'Request the exposé or a <span class="gold">private viewing</span>',
+        contactLead: "Use the form below to request property details, the full gallery, videos, or a personal appointment.",
+        contactInfoTitle: "Direct contact",
+        contactInfoText: "Fast communication builds trust with serious buyers. Add your real contact details below and connect the form to your preferred email or CRM workflow.",
+        contactPhone: "Phone",
+        contactWhatsApp: "Start WhatsApp chat",
+        contactEmail: "Email",
+        contactAvailability: "Availability",
+        contactAvailabilityValue: "Viewings by appointment",
+        formName: "Full name",
+        formPhone: "Phone number",
+        formEmail: "Email address",
+        formInterest: "Interest",
+        opt1: "Request a viewing",
+        opt2: "Request exposé",
+        opt3: "Request videos",
+        opt4: "Request callback",
+        formMessage: "Message",
+        formSubmit: "Send inquiry",
+        formWhatsApp: "WhatsApp instead",
+        formNote: "By submitting, you agree that your contact details may be used to process your inquiry.",
+        ctaEyebrow: "Final call to action",
+        ctaTitle: 'Secure a home with <span class="gold">luxury, design, and location quality</span>',
+        ctaText: "For buyers seeking a modernized premium property near Fürth and Nuremberg, this Oberasbach home offers a rare combination of atmosphere, daily comfort, and lasting value.",
+        ctaBtn1: "Arrange private viewing",
+        ctaBtn2: "Call now",
+        footerRights: "All rights reserved.",
+        footerImprint: "Imprint",
+        footerPrivacy: "Privacy"
+      }
+    };
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navbar = document.getElementById("navbar");
+    const handleNavbar = () => {
+      if (window.scrollY > 20) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    };
+    handleNavbar();
+    window.addEventListener("scroll", handleNavbar);
+
+    const navToggle = document.getElementById("navToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (navToggle) {
+      navToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+    }
+
+    document.querySelectorAll(".nav-links a, .nav-menu-mobile a").forEach(link => {
+      link.addEventListener("click", () => mobileMenu.classList.remove("open"));
+    });
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    const sections = document.querySelectorAll("section[id], header[id]");
+    const navAnchors = document.querySelectorAll(".nav-links a");
+    const setActiveNav = () => {
+      let current = "";
+      const offset = window.innerHeight * 0.25;
+      sections.forEach(section => {
+        const top = section.offsetTop - offset - 80;
+        const height = section.offsetHeight;
+        if (window.scrollY >= top && window.scrollY < top + height) current = section.getAttribute("id");
+      });
+      navAnchors.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+      });
+    };
+    window.addEventListener("scroll", setActiveNav);
+    setActiveNav();
+
+    const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
+    const modal = document.getElementById("galleryModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalCaption = document.getElementById("modalCaption");
+    const modalClose = document.getElementById("modalClose");
+    const modalPrev = document.getElementById("modalPrev");
+    const modalNext = document.getElementById("modalNext");
+
+    let currentIndex = 0;
+
+    const openModal = (index) => {
+      currentIndex = index;
+      const item = galleryItems[currentIndex];
+      modalImage.src = item.getAttribute("data-image");
+      modalCaption.textContent = item.getAttribute("data-caption") || "";
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    const showPrev = () => openModal((currentIndex - 1 + galleryItems.length) % galleryItems.length);
+    const showNext = () => openModal((currentIndex + 1) % galleryItems.length);
+
+    galleryItems.forEach((item, index) => item.addEventListener("click", () => openModal(index)));
+    modalClose.addEventListener("click", closeModal);
+    modalPrev.addEventListener("click", showPrev);
+    modalNext.addEventListener("click", showNext);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+
+    document.addEventListener("keydown", (e) => {
+      if (!modal.classList.contains("open")) return;
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "ArrowRight") showNext();
+    });
+
+    function setupVideoCarousel(videoSelector, fallbackSelector) {
+      const videos = Array.from(document.querySelectorAll(videoSelector));
+      const fallback = document.querySelector(fallbackSelector);
+      let currentVideoIndex = 0;
+      let switchingVideo = false;
+
+      function showFallbackImage() {
+        if (fallback) fallback.classList.add("show");
+      }
+
+      function hideFallbackImage() {
+        if (fallback) fallback.classList.remove("show");
+      }
+
+      function resetInactiveVideos(activeIndex) {
+        videos.forEach((video, index) => {
+          if (index !== activeIndex) {
+            video.classList.remove("active");
+            video.pause();
+            try { video.currentTime = 0; } catch (e) {}
+          }
+        });
+      }
+
+      function tryPlay(video) {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => hideFallbackImage()).catch(() => showFallbackImage());
+        }
+      }
+
+      function playVideoAt(index) {
+        if (!videos.length) return;
+        const video = videos[index];
+        resetInactiveVideos(index);
+        video.classList.add("active");
+        currentVideoIndex = index;
+        tryPlay(video);
+      }
+
+      function nextVideoIndex() {
+        return (currentVideoIndex + 1) % videos.length;
+      }
+
+      function switchToNextVideo() {
+        if (switchingVideo || videos.length <= 1) return;
+        switchingVideo = true;
+
+        const currentVideo = videos[currentVideoIndex];
+        const nextIndex = nextVideoIndex();
+        const nextVideo = videos[nextIndex];
+
+        try { nextVideo.currentTime = 0; } catch (e) {}
+        nextVideo.classList.add("active");
+        tryPlay(nextVideo);
+
+        setTimeout(() => {
+          currentVideo.classList.remove("active");
+          currentVideo.pause();
+          try { currentVideo.currentTime = 0; } catch (e) {}
+          currentVideoIndex = nextIndex;
+          switchingVideo = false;
+        }, 700);
+      }
+
+      function setup() {
+        if (!videos.length) {
+          showFallbackImage();
+          return;
+        }
+
+        videos.forEach((video, index) => {
+          video.muted = true;
+          video.loop = false;
+          video.autoplay = false;
+          video.playsInline = true;
+          video.setAttribute("muted", "");
+          video.setAttribute("playsinline", "");
+          video.setAttribute("webkit-playsinline", "");
+
+          video.addEventListener("ended", () => {
+            if (index === currentVideoIndex) switchToNextVideo();
+          });
+
+          video.addEventListener("timeupdate", () => {
+            if (index === currentVideoIndex && !switchingVideo && video.duration && (video.duration - video.currentTime) < 0.20) {
+              switchToNextVideo();
+            }
+          });
+
+          video.addEventListener("error", () => {
+            if (index === currentVideoIndex) switchToNextVideo();
+          });
+        });
+
+        playVideoAt(0);
+
+        document.addEventListener("visibilitychange", () => {
+          const activeVideo = videos[currentVideoIndex];
+          if (!document.hidden && activeVideo) tryPlay(activeVideo);
+        });
+
+        ["click", "touchstart", "keydown"].forEach(eventName => {
+          window.addEventListener(eventName, function resumeOnce() {
+            const activeVideo = videos[currentVideoIndex];
+            if (activeVideo) tryPlay(activeVideo);
+            window.removeEventListener(eventName, resumeOnce);
+          }, { once: true });
+        });
+      }
+
+      setup();
+    }
+
+    setupVideoCarousel(".hero-video", "#heroFallbackImage");
+    setupVideoCarousel(".video-carousel-item", "#videoSectionFallback");
+
+    const htmlMap = document.querySelectorAll("[data-i18n-html]");
+    const textMap = document.querySelectorAll("[data-i18n]");
+    const formMessage = document.getElementById("message");
+    const nameInput = document.getElementById("name");
+    const phoneInput = document.getElementById("phone");
+    const emailInput = document.getElementById("email");
+    const langDe = document.getElementById("langDe");
+    const langEn = document.getElementById("langEn");
+    const mobileLangDe = document.getElementById("mobileLangDe");
+    const mobileLangEn = document.getElementById("mobileLangEn");
+
+    function setLanguage(lang) {
+      const t = translations[lang];
+      document.documentElement.lang = lang === "de" ? "de" : "en";
+      document.title = t.pageTitle;
+      document.querySelector('meta[name="description"]').setAttribute("content", t.pageDescription);
+
+      textMap.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) el.textContent = t[key];
+      });
+
+      htmlMap.forEach(el => {
+        const key = el.getAttribute("data-i18n-html");
+        if (t[key]) el.innerHTML = t[key];
+      });
+
+      nameInput.placeholder = lang === "de" ? "Ihr vollständiger Name" : "Your full name";
+      phoneInput.placeholder = "+49 ...";
+      emailInput.placeholder = lang === "de" ? "sie@example.com" : "you@example.com";
+      formMessage.placeholder = lang === "de"
+        ? "Ich interessiere mich für die Immobilie in Oberasbach und möchte gerne weitere Informationen erhalten..."
+        : "I am interested in the property in Oberasbach and would like to receive more information...";
+
+      langDe.classList.toggle("active", lang === "de");
+      langEn.classList.toggle("active", lang === "en");
+
+      localStorage.setItem("property_language", lang);
+    }
+
+    langDe.addEventListener("click", () => setLanguage("de"));
+    langEn.addEventListener("click", () => setLanguage("en"));
+    mobileLangDe.addEventListener("click", () => {
+      setLanguage("de");
+      mobileMenu.classList.remove("open");
+    });
+    mobileLangEn.addEventListener("click", () => {
+      setLanguage("en");
+      mobileMenu.classList.remove("open");
+    });
+
+    const storedLanguage = localStorage.getItem("property_language") || "de";
+    setLanguage(storedLanguage);
+  </script>
+</body>
+</html>
