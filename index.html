@@ -35,6 +35,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -73,6 +74,7 @@
     .section {
       padding: 110px 0;
       position: relative;
+      overflow-x: hidden;
     }
 
     .section-title-wrap {
@@ -685,12 +687,22 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
+      overflow: visible;
+  align-items: stretch;
     }
+    
+    #features,
+#features .container,
+#features .features-grid {
+  overflow: visible;
+}
 
     .feature-card {
       padding: 26px;
       border-radius: var(--radius);
       min-height: 210px;
+      height: auto;
+  overflow: visible;
       transition: transform var(--transition), border-color var(--transition), background var(--transition);
     }
 
@@ -766,6 +778,55 @@
       gap: 16px;
       align-items: end;
       font-size: 14px;
+    }
+
+    .gallery-item.view-more-card::after {
+      background:
+        linear-gradient(180deg, rgba(8,6,7,0.10) 0%, rgba(8,6,7,0.42) 38%, rgba(8,6,7,0.82) 100%);
+      opacity: 1;
+    }
+
+    .gallery-item.view-more-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(199,146,61,0.35) 0%, rgba(199,146,61,0.10) 22%, rgba(0,0,0,0) 48%);
+      pointer-events: none;
+    }
+
+    .gallery-item.view-more-card .caption {
+      display: none;
+    }
+
+    .gallery-view-more {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .gallery-view-more span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      min-width: 190px;
+      padding: 0 28px;
+      border-radius: 999px;
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 13px;
+      background: rgba(10, 7, 8, 0.42);
+      border: 1px solid rgba(239,210,154,0.34);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.22);
     }
 
     .gallery-item:hover img {
@@ -975,6 +1036,141 @@
       font-size: 18px;
       font-weight: 600;
       word-break: break-word;
+    }
+
+    .contact-card-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: var(--gold-2);
+      background: rgba(214,181,116,0.10);
+      border: 1px solid rgba(214,181,116,0.18);
+    }
+
+    .contact-card-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    .contact-card-text {
+      min-width: 0;
+    }
+
+    .contact-side-panel {
+      border-radius: var(--radius);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-side-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+
+    .contact-side-panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-side-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-2);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .contact-side-eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .contact-side-panel p + p {
+      margin-top: 12px;
+    }
+
+    .contact-highlights {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin: 24px 0 28px;
+    }
+
+    .contact-highlights li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: var(--white);
+    }
+
+    .contact-highlights li::before {
+      content: "✓";
+      flex-shrink: 0;
+      color: var(--gold-2);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-top: 1px;
+    }
+
+    .contact-action-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .contact-action-card {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      display: grid;
+      gap: 8px;
+    }
+
+    .contact-action-card strong {
+      color: var(--white);
+      font-size: 16px;
+    }
+
+    .contact-action-card span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .contact-side-panel .btn-group {
+      margin-top: 24px;
+    }
+
+    .contact-side-note {
+      margin-top: 16px;
+      color: var(--soft);
+      font-size: 13px;
     }
 
     .form-grid {
@@ -1580,12 +1776,12 @@
 
       .hero-content,
       .hero-card {
-        max-width: 100%;
-        width: 100%;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 30px;
+          width: 100%;
+          max-width: 100%;
+          min-width: 0;
+          margin: 0;
+          box-sizing: border-box;
+          padding-bottom: 30px;
       }
 
       .hero-content {
@@ -1718,6 +1914,10 @@
       .hero h1 {
         font-size: clamp(34px, 12vw, 50px);
         line-height: 1.03;
+        margin-bottom: 14px;
+        word-break: normal;
+        overflow-wrap: break-word;
+        hyphens: auto;
       }
 
       .hero-subtitle {
@@ -1750,8 +1950,13 @@
       .video-text,
       .location-panel,
       .contact-info,
-      .contact-form-wrap {
+      .contact-form-wrap,
+      .contact-side-panel {
         padding: 22px 18px;
+      }
+
+      .contact-action-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero-card {
@@ -2101,14 +2306,14 @@
           <div class="caption"><span data-i18n="galleryCap4">Schlafzimmer</span><span data-i18n="openImage">Bild öffnen ↗</span></div>
         </div>
 
-        <div class="gallery-item reveal reveal-delay-2" data-image="assets/images/gallery-5.jpg" data-caption="Terrasse / Außenbereich">
-          <img src="assets/images/gallery-5.jpg" alt="Terrace exterior" />
-          <div class="caption"><span data-i18n="galleryCap5">Terrasse</span><span data-i18n="openImage">Bild öffnen ↗</span></div>
+        <div class="gallery-item view-more-card reveal reveal-delay-2" data-image="assets/images/gallery-5.jpg" data-caption="" data-gallery-trigger="more">
+          <img src="assets/images/gallery-5.jpg" alt="Additional property gallery images" />
+          <div class="gallery-view-more"><span data-i18n="galleryViewMore">Mehr ansehen</span></div>
         </div>
       </div>
 
       <div class="gallery-footer reveal">
-        <p data-i18n="galleryFooter">Fügen Sie hier Ihre stärksten Außen-, Küchen-, Wohn-, Bad-, Dachgeschoss-, Terrassen- und Detailaufnahmen ein.</p>
+        <p data-i18n="galleryFooter"></p>
         <a href="#contact" class="btn btn-secondary" data-i18n="galleryBtn">Komplette Fotostrecke anfragen</a>
       </div>
     </div>
@@ -2247,7 +2452,7 @@
           <h2 data-i18n-html="contactTitle">Exposé oder <span class="gold">private Besichtigung</span> anfragen</h2>
         </div>
         <p class="lead" data-i18n="contactLead">
-          Nutzen Sie das Formular unten, um Informationen zum Objekt, die vollständige Galerie, Videos oder einen persönlichen Termin anzufragen.
+          Nutzen Sie die direkten Kontaktwege unten, um Exposé, Galerie, Videos oder einen persönlichen Termin anzufragen.
         </p>
       </div>
 
@@ -2255,84 +2460,111 @@
         <div class="contact-info glass reveal">
           <h3 data-i18n="contactInfoTitle">Direkter Kontakt</h3>
           <p data-i18n="contactInfoText">
-            Für ernsthafte Interessenten schafft schnelle Kommunikation Vertrauen. Fügen Sie unten Ihre echten Kontaktdaten hinzu und verbinden Sie das Formular mit Ihrem bevorzugten E-Mail- oder CRM-Workflow.
+            Für ernsthafte Interessenten schafft schnelle Kommunikation Vertrauen. Kontaktieren Sie uns direkt per Telefon, WhatsApp oder E-Mail.
           </p>
 
           <div class="contact-cards">
             <div class="contact-card">
-              <small data-i18n="contactPhone">Telefon</small>
-              <!-- REPLACE: phone number -->
-              <a href="tel:+491234567890">+49 123 456 7890</a>
+              <a class="contact-card-link" href="tel:+491234567890">
+                <span class="contact-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.61a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.47-1.29a2 2 0 0 1 2.11-.45c.83.3 1.71.51 2.61.63A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </span>
+                <span class="contact-card-text">
+                  <small data-i18n="contactPhone">Telefon</small>
+                  <span>+49 123 456 7890</span>
+                </span>
+              </a>
             </div>
 
             <div class="contact-card">
-              <small>WhatsApp</small>
-              <!-- REPLACE: WhatsApp link -->
-              <a href="https://wa.me/491234567890" target="_blank" rel="noopener" data-i18n="contactWhatsApp">WhatsApp Chat starten</a>
+              <a class="contact-card-link" href="https://wa.me/491234567890" target="_blank" rel="noopener">
+                <span class="contact-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.52 3.48A11.8 11.8 0 0 0 12.07 0C5.56 0 .25 5.31.25 11.82c0 2.08.54 4.11 1.56 5.9L0 24l6.47-1.69a11.8 11.8 0 0 0 5.6 1.43h.01c6.51 0 11.82-5.31 11.82-11.82 0-3.16-1.23-6.13-3.38-8.44z" transform="scale(.9) translate(1 1)"/>
+                    <path d="M8.8 7.6c-.21-.47-.43-.48-.63-.49-.16-.01-.35-.01-.54-.01s-.49.07-.74.35c-.26.28-1 1-1 2.45s1.02 2.84 1.16 3.03c.14.19 1.97 3.17 4.86 4.32 2.4.95 2.89.76 3.41.71.52-.05 1.68-.69 1.92-1.36.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.54-.33-.28-.14-1.68-.84-1.94-.93-.26-.09-.45-.14-.64.14-.19.28-.73.93-.9 1.12-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.25-1.37-.83-.74-1.4-1.64-1.56-1.92-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.63-1.53-.88-2.1z"/>
+                  </svg>
+                </span>
+                <span class="contact-card-text">
+                  <small>WhatsApp</small>
+                  <span data-i18n="contactWhatsApp">WhatsApp Chat starten</span>
+                </span>
+              </a>
             </div>
 
             <div class="contact-card">
-              <small data-i18n="contactEmail">E-Mail</small>
-              <!-- REPLACE: email -->
-              <a href="mailto:info@example.com">info@example.com</a>
+              <a class="contact-card-link" href="mailto:info@example.com">
+                <span class="contact-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+                    <path d="m3 7 9 6 9-6"/>
+                  </svg>
+                </span>
+                <span class="contact-card-text">
+                  <small data-i18n="contactEmail">E-Mail</small>
+                  <span>info@example.com</span>
+                </span>
+              </a>
             </div>
 
             <div class="contact-card">
-              <small data-i18n="contactAvailability">Verfügbarkeit</small>
-              <span data-i18n="contactAvailabilityValue">Besichtigungen nach Vereinbarung</span>
+              <div class="contact-card-link">
+                <span class="contact-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M12 7v5l3 3"/>
+                  </svg>
+                </span>
+                <span class="contact-card-text">
+                  <small data-i18n="contactAvailability">Verfügbarkeit</small>
+                  <span data-i18n="contactAvailabilityValue">Besichtigungen nach Vereinbarung</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="contact-form-wrap glass reveal">
-          <!-- REPLACE: form action -->
-          <form action="https://example.com/form-handler" method="post">
-            <div class="form-grid">
-              <div class="field">
-                <label for="name" data-i18n="formName">Vollständiger Name</label>
-                <input type="text" id="name" name="name" placeholder="Ihr vollständiger Name" required />
-              </div>
+        <div class="contact-side-panel glass reveal">
+          <!-- <div class="contact-side-eyebrow" data-i18n="contactSideEyebrow">Besichtigung ohne Formular</div> -->
+          <h3 data-i18n="contactSideTitle">Schnell und direkt anfragen</h3>
+          <p data-i18n="contactSideText1">
+            Diese Seite verzichtet bewusst auf ein eingebautes Formular. So bleibt die Integration schlank und es ist kein zusätzlicher E-Mail-Service notwendig.
+          </p>
+          <p data-i18n="contactSideText2">
+            Interessenten können sich trotzdem sofort melden und erhalten alle wichtigen Informationen direkt über die bevorzugten Kontaktwege.
+          </p>
 
-              <div class="field">
-                <label for="phone" data-i18n="formPhone">Telefonnummer</label>
-                <input type="tel" id="phone" name="phone" placeholder="+49 ..." required />
-              </div>
+          <ul class="contact-highlights">
+            <li data-i18n="contactBullet1">Telefonisch anfragen und Besichtigung direkt abstimmen</li>
+            <li data-i18n="contactBullet2">Per WhatsApp schnell Exposé, Galerie oder Rückruf anfordern</li>
+            <li data-i18n="contactBullet3">Per E-Mail alle Objektunterlagen gesammelt erhalten</li>
+          </ul>
 
-              <div class="field">
-                <label for="email" data-i18n="formEmail">E-Mail-Adresse</label>
-                <input type="email" id="email" name="email" placeholder="sie@example.com" required />
-              </div>
-
-              <div class="field">
-                <label for="interest" data-i18n="formInterest">Interesse</label>
-                <select id="interest" name="interest">
-                  <option value="viewing" data-i18n="opt1">Besichtigung anfragen</option>
-                  <option value="expose" data-i18n="opt2">Exposé anfragen</option>
-                  <option value="video" data-i18n="opt3">Videos anfragen</option>
-                  <option value="callback" data-i18n="opt4">Rückruf erwünscht</option>
-                </select>
-              </div>
-
-              <div class="field full">
-                <label for="message" data-i18n="formMessage">Nachricht</label>
-                <textarea id="message" name="message" placeholder="Ich interessiere mich für die Immobilie in Oberasbach und möchte gerne weitere Informationen erhalten..."></textarea>
-              </div>
+          <!-- <div class="contact-action-grid">
+            <div class="contact-action-card">
+              <strong data-i18n="contactActionTitle1">Schnelle Reaktion</strong>
+              <span data-i18n="contactActionText1">Ideal für direkte Besichtigungsanfragen und Rückfragen zum Objekt.</span>
             </div>
-
-            <div class="btn-group" style="margin-top:20px;">
-              <button type="submit" class="btn btn-primary" data-i18n="formSubmit">Anfrage senden</button>
-              <!-- REPLACE: WhatsApp link -->
-              <a href="https://wa.me/491234567890" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="formWhatsApp">Stattdessen WhatsApp</a>
+            <div class="contact-action-card">
+              <strong data-i18n="contactActionTitle2">Saubere Integration</strong>
+              <span data-i18n="contactActionText2">Kein Formular-Backend, kein Mail-Service, keine zusätzliche Fehlerquelle.</span>
             </div>
+          </div> -->
 
-            <p class="form-note" data-i18n="formNote">
-              Mit dem Absenden erklären Sie sich einverstanden, dass Ihre Kontaktdaten zur Bearbeitung Ihrer Anfrage verwendet werden.
-            </p>
-          </form>
+          <div class="btn-group">
+            <a href="tel:+491234567890" class="btn btn-primary" data-i18n="contactCtaPhone">Jetzt anrufen</a>
+            <a href="https://wa.me/491234567890" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="contactCtaWhatsApp">WhatsApp öffnen</a>
+            <a href="mailto:info@example.com" class="btn btn-secondary" data-i18n="contactCtaEmail">E-Mail schreiben</a>
+          </div>
+
+          <!-- <p class="contact-side-note" data-i18n="contactSideNote">
+            Ergänzen Sie hier einfach Ihre echten Kontaktdaten. Weitere technische Integration ist für diesen Bereich nicht erforderlich.
+          </p> -->
         </div>
       </div>
     </div>
-  </section>
+  </section>  </section>
 
   <section class="section final-cta">
     <div class="container">
@@ -2455,8 +2687,9 @@
         galleryCap3: "Bad",
         galleryCap4: "Schlafzimmer",
         galleryCap5: "Terrasse",
+        galleryViewMore: "Mehr ansehen",
         openImage: "Bild öffnen ↗",
-        galleryFooter: "Fügen Sie hier Ihre stärksten Außen-, Küchen-, Wohn-, Bad-, Dachgeschoss-, Terrassen- und Detailaufnahmen ein.",
+        galleryFooter: "",
         galleryBtn: "Komplette Fotostrecke anfragen",
         videoTitle: 'Bringen Sie die Immobilie mit <span class="gold">Bewegung und Atmosphäre</span> zum Leben',
         videoBadge: "Video Showcase",
@@ -2490,9 +2723,24 @@
         locationLi5: "Gute ÖPNV-Anbindung",
         locationLi6: "Sehr gute Straßenanbindung in die Region",
         contactTitle: 'Exposé oder <span class="gold">private Besichtigung</span> anfragen',
-        contactLead: "Nutzen Sie das Formular unten, um Informationen zum Objekt, die vollständige Galerie, Videos oder einen persönlichen Termin anzufragen.",
+        contactLead: "Nutzen Sie die direkten Kontaktwege unten, um Exposé, Galerie, Videos oder einen persönlichen Termin anzufragen.",
         contactInfoTitle: "Direkter Kontakt",
-        contactInfoText: "Für ernsthafte Interessenten schafft schnelle Kommunikation Vertrauen. Fügen Sie unten Ihre echten Kontaktdaten hinzu und verbinden Sie das Formular mit Ihrem bevorzugten E-Mail- oder CRM-Workflow.",
+        contactInfoText: "Für ernsthafte Interessenten schafft schnelle Kommunikation Vertrauen. Kontaktieren Sie uns direkt per Telefon, WhatsApp oder E-Mail.",
+        contactSideEyebrow: "Besichtigung ohne Formular",
+        contactSideTitle: "Schnell und direkt anfragen",
+        contactSideText1: "Diese Seite verzichtet bewusst auf ein eingebautes Formular. So bleibt die Integration schlank und es ist kein zusätzlicher E-Mail-Service notwendig.",
+        contactSideText2: "Interessenten können sich trotzdem sofort melden und erhalten alle wichtigen Informationen direkt über die bevorzugten Kontaktwege.",
+        contactBullet1: "Telefonisch anfragen und Besichtigung direkt abstimmen",
+        contactBullet2: "Per WhatsApp schnell Exposé, Galerie oder Rückruf anfordern",
+        contactBullet3: "Per E-Mail alle Objektunterlagen gesammelt erhalten",
+        contactActionTitle1: "Schnelle Reaktion",
+        contactActionText1: "Ideal für direkte Besichtigungsanfragen und Rückfragen zum Objekt.",
+        contactActionTitle2: "Saubere Integration",
+        contactActionText2: "Kein Formular-Backend, kein Mail-Service, keine zusätzliche Fehlerquelle.",
+        contactCtaPhone: "Jetzt anrufen",
+        contactCtaWhatsApp: "WhatsApp öffnen",
+        contactCtaEmail: "E-Mail schreiben",
+        contactSideNote: "Ergänzen Sie hier einfach Ihre echten Kontaktdaten. Weitere technische Integration ist für diesen Bereich nicht erforderlich.",
         contactPhone: "Telefon",
         contactWhatsApp: "WhatsApp Chat starten",
         contactEmail: "E-Mail",
@@ -2589,8 +2837,9 @@
         galleryCap3: "Bathroom",
         galleryCap4: "Bedroom",
         galleryCap5: "Terrace",
+        galleryViewMore: "View more",
         openImage: "Open image ↗",
-        galleryFooter: "Add your strongest exterior, kitchen, living, bathroom, attic loft, terrace, and detail shots here.",
+        galleryFooter: "",
         galleryBtn: "Request full photo set",
         videoTitle: 'Bring the property to life with <span class="gold">motion and atmosphere</span>',
         videoBadge: "Video Showcase",
@@ -2624,9 +2873,24 @@
         locationLi5: "Good public transport connections",
         locationLi6: "Very good road connections across the region",
         contactTitle: 'Request the exposé or a <span class="gold">private viewing</span>',
-        contactLead: "Use the form below to request property details, the full gallery, videos, or a personal appointment.",
+        contactLead: "Use the direct contact options below to request the exposé, gallery, videos, or a personal viewing.",
         contactInfoTitle: "Direct contact",
-        contactInfoText: "Fast communication builds trust with serious buyers. Add your real contact details below and connect the form to your preferred email or CRM workflow.",
+        contactInfoText: "Fast communication builds trust with serious buyers. Reach out directly by phone, WhatsApp, or email.",
+        contactSideEyebrow: "Viewing without a form",
+        contactSideTitle: "Inquire quickly and directly",
+        contactSideText1: "This page intentionally avoids an embedded form. That keeps the integration lean and removes the need for an additional email service.",
+        contactSideText2: "Interested buyers can still get in touch immediately and receive all key information through the contact channel they prefer.",
+        contactBullet1: "Call directly and arrange a private viewing right away",
+        contactBullet2: "Use WhatsApp to request the exposé, gallery, or a callback",
+        contactBullet3: "Receive all property details in one place via email",
+        contactActionTitle1: "Fast response",
+        contactActionText1: "Perfect for direct viewing requests and quick property questions.",
+        contactActionTitle2: "Clean integration",
+        contactActionText2: "No form backend, no mail service, and no extra failure point.",
+        contactCtaPhone: "Call now",
+        contactCtaWhatsApp: "Open WhatsApp",
+        contactCtaEmail: "Write email",
+        contactSideNote: "Just replace the contact details with your real ones. No extra technical integration is required for this section.",
         contactPhone: "Phone",
         contactWhatsApp: "Start WhatsApp chat",
         contactEmail: "Email",
@@ -2705,6 +2969,14 @@
     window.addEventListener("scroll", setActiveNav);
     setActiveNav();
 
+    const additionalGalleryImages = [
+      { src: "assets/images/gallery-6.jpg", captionDe: "Zusätzlicher Eindruck 1", captionEn: "Additional view 1" },
+      { src: "assets/images/gallery-7.jpg", captionDe: "Zusätzlicher Eindruck 2", captionEn: "Additional view 2" },
+      { src: "assets/images/gallery-8.jpg", captionDe: "Zusätzlicher Eindruck 3", captionEn: "Additional view 3" },
+      { src: "assets/images/gallery-9.jpg", captionDe: "Zusätzlicher Eindruck 4", captionEn: "Additional view 4" },
+      { src: "assets/images/gallery-10.jpg", captionDe: "Zusätzlicher Eindruck 4", captionEn: "Additional view 4" }
+    ];
+
     const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
     const modal = document.getElementById("galleryModal");
     const modalImage = document.getElementById("modalImage");
@@ -2715,26 +2987,66 @@
 
     let currentIndex = 0;
 
-    const openModal = (index) => {
+    function getCurrentLanguage() {
+      return document.documentElement.lang === "en" ? "en" : "de";
+    }
+
+    function getGalleryCaption(item, lang = getCurrentLanguage()) {
+      return lang === "en"
+        ? (item.captionEn || item.caption || "")
+        : (item.captionDe || item.caption || "");
+    }
+
+    function buildGalleryData() {
+      const baseItems = galleryItems.map((item) => ({
+        src: item.getAttribute("data-image"),
+        caption: item.getAttribute("data-caption") || "",
+        captionDe: item.getAttribute("data-caption-de") || item.getAttribute("data-caption") || "",
+        captionEn: item.getAttribute("data-caption-en") || item.getAttribute("data-caption") || ""
+      }));
+
+      return [...baseItems, ...additionalGalleryImages];
+    }
+
+    function openModal(index) {
+      const galleryData = buildGalleryData();
       currentIndex = index;
-      const item = galleryItems[currentIndex];
-      modalImage.src = item.getAttribute("data-image");
-      modalCaption.textContent = item.getAttribute("data-caption") || "";
+      const item = galleryData[currentIndex];
+      if (!item) return;
+
+      modalImage.src = item.src;
+      modalCaption.textContent = getGalleryCaption(item);
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
-    };
+    }
 
-    const closeModal = () => {
+    function closeModal() {
       modal.classList.remove("open");
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
-    };
+    }
 
-    const showPrev = () => openModal((currentIndex - 1 + galleryItems.length) % galleryItems.length);
-    const showNext = () => openModal((currentIndex + 1) % galleryItems.length);
+    function showPrev() {
+      const galleryData = buildGalleryData();
+      openModal((currentIndex - 1 + galleryData.length) % galleryData.length);
+    }
 
-    galleryItems.forEach((item, index) => item.addEventListener("click", () => openModal(index)));
+    function showNext() {
+      const galleryData = buildGalleryData();
+      openModal((currentIndex + 1) % galleryData.length);
+    }
+
+    galleryItems.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        if (item.dataset.galleryTrigger === "more") {
+          openModal(0);
+          return;
+        }
+        openModal(index);
+      });
+    });
+
     modalClose.addEventListener("click", closeModal);
     modalPrev.addEventListener("click", showPrev);
     modalNext.addEventListener("click", showNext);
@@ -2747,7 +3059,7 @@
       if (e.key === "ArrowRight") showNext();
     });
 
-    function setupVideoCarousel(videoSelector, fallbackSelector) {
+    function setupVideoCarousel(videoSelector, fallbackSelector, playbackRate = 1) {
       const videos = Array.from(document.querySelectorAll(videoSelector));
       const fallback = document.querySelector(fallbackSelector);
       let currentVideoIndex = 0;
@@ -2823,6 +3135,7 @@
           video.loop = false;
           video.autoplay = false;
           video.playsInline = true;
+          video.playbackRate = playbackRate;
           video.setAttribute("muted", "");
           video.setAttribute("playsinline", "");
           video.setAttribute("webkit-playsinline", "");
@@ -2861,8 +3174,8 @@
       setup();
     }
 
-    setupVideoCarousel(".hero-video", "#heroFallbackImage");
-    setupVideoCarousel(".video-carousel-item", "#videoSectionFallback");
+    setupVideoCarousel(".hero-video", "#heroFallbackImage", 1.5);
+    setupVideoCarousel(".video-carousel-item", "#videoSectionFallback", 1);
 
     const htmlMap = document.querySelectorAll("[data-i18n-html]");
     const textMap = document.querySelectorAll("[data-i18n]");
@@ -2891,12 +3204,14 @@
         if (t[key]) el.innerHTML = t[key];
       });
 
-      nameInput.placeholder = lang === "de" ? "Ihr vollständiger Name" : "Your full name";
-      phoneInput.placeholder = "+49 ...";
-      emailInput.placeholder = lang === "de" ? "sie@example.com" : "you@example.com";
-      formMessage.placeholder = lang === "de"
-        ? "Ich interessiere mich für die Immobilie in Oberasbach und möchte gerne weitere Informationen erhalten..."
-        : "I am interested in the property in Oberasbach and would like to receive more information...";
+      if (nameInput) nameInput.placeholder = lang === "de" ? "Ihr vollständiger Name" : "Your full name";
+      if (phoneInput) phoneInput.placeholder = "+49 ...";
+      if (emailInput) emailInput.placeholder = lang === "de" ? "sie@example.com" : "you@example.com";
+      if (formMessage) {
+        formMessage.placeholder = lang === "de"
+          ? "Ich interessiere mich für die Immobilie in Oberasbach und möchte gerne weitere Informationen erhalten..."
+          : "I am interested in the property in Oberasbach and would like to receive more information...";
+      }
 
       langDe.classList.toggle("active", lang === "de");
       langEn.classList.toggle("active", lang === "en");
