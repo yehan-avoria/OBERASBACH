@@ -1426,6 +1426,47 @@
       box-shadow: 0 20px 50px rgba(20,150,71,0.44);
     }
 
+    .scroll-top-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 94px;
+      z-index: 999;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: rgba(18, 12, 12, 0.84);
+      border: 1px solid rgba(239,210,154,0.22);
+      box-shadow: 0 16px 38px rgba(0,0,0,0.30);
+      backdrop-filter: blur(12px);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(14px);
+      pointer-events: none;
+      transition: opacity var(--transition), visibility var(--transition), transform var(--transition), background var(--transition), border-color var(--transition);
+    }
+
+    .scroll-top-btn.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .scroll-top-btn:hover {
+      background: rgba(31, 20, 20, 0.94);
+      border-color: rgba(239,210,154,0.34);
+      transform: translateY(-3px);
+    }
+
+    .scroll-top-btn svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
     .reveal-delay-1 { transition-delay: 0.05s; }
     .reveal-delay-2 { transition-delay: 0.1s; }
     .reveal-delay-3 { transition-delay: 0.15s; }
@@ -1688,6 +1729,67 @@
         min-height: 360px;
       }
     }
+
+    @media (max-width: 1024px) and (min-width: 901px) {
+  .nav-inner {
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 170px;
+  }
+
+  .brand-top {
+    font-size: 26px;
+  }
+
+  .brand-bottom {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .brand-bottom::before,
+  .brand-bottom::after {
+    min-width: 14px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-cta {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .nav-phone {
+    display: none;
+  }
+
+  .lang-switch {
+    padding: 4px;
+    gap: 4px;
+  }
+
+  .lang-btn {
+    min-width: 40px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .nav-cta .btn {
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
 
     @media (max-width: 900px) {
       .nav-links,
@@ -2008,6 +2110,13 @@
         align-items: flex-start;
       }
 
+      .scroll-top-btn {
+        right: 16px;
+        bottom: 88px;
+        width: 52px;
+        height: 52px;
+      }
+
       .modal-close,
       .modal-nav {
         width: 46px;
@@ -2041,7 +2150,7 @@
           <button class="lang-btn" id="langEn">EN</button>
         </div>
         <!-- REPLACE: phone number -->
-        <a class="nav-phone" href="tel:+491234567890">+49 123 456 7890</a>
+        <a class="nav-phone" href="tel:+491743777794">+49 174 377 7794</a>
         <a href="#contact" class="btn btn-primary" data-i18n="navCta">Besichtigung anfragen</a>
         <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
       </div>
@@ -2060,9 +2169,9 @@
         <button type="button" id="mobileLangDe">Deutsch</button>
         <button type="button" id="mobileLangEn">English</button>
         <!-- REPLACE: WhatsApp link -->
-        <a href="https://wa.me/491234567890" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/491743777794" target="_blank" rel="noopener">WhatsApp</a>
         <!-- REPLACE: phone number -->
-        <a href="tel:+491234567890" data-i18n="callNow">Jetzt anrufen</a>
+        <a href="tel:+491743777794" data-i18n="callNow">Jetzt anrufen</a>
       </div>
     </div>
   </nav>
@@ -2085,7 +2194,7 @@
       <div class="hero-content reveal">
         <div class="hero-kicker" data-i18n="heroKicker">Beste Familienlage • am Naturschutzgebiet • Einkauf & Schule in der Nähe</div>
         <h1 data-i18n-html="heroTitle">Modernisierte <span class="gold">Doppelhaushälfte</span> in bester Lage von Oberasbach.</h1>
-        <p class="hero-subtitle" data-i18n="heroSubtitle">Direkt vom Eigentümer — provisionsfrei für Käufer.</p>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">Direkt vom Eigentümer - provisionsfrei für Käufer.</p>
         <p class="hero-description" data-i18n-html="heroDescription">
           Diese hochwertig modernisierte Doppelhaushälfte vereint <span class="gold">stilvolles Design</span>, großzügiges Wohnen und die perfekte Lage für Familien. Direkt am Naturschutzgebiet gelegen und trotzdem nur wenige Gehminuten zum Lidl, zur Grundschule und Kita. Mit spa-ähnlichen Bädern, Fußbodenheizung, ausgebautem Dachgeschoss, Terrasse und Garage bietet sie Wohnqualität auf Top-Niveau nahe Fürth und Nürnberg.
         </p>
@@ -2094,7 +2203,7 @@
           <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">Besichtigung anfragen</a>
           <a href="#gallery" class="btn btn-secondary" data-i18n="heroBtn2">Galerie ansehen</a>
           <!-- REPLACE: WhatsApp link -->
-          <a href="https://wa.me/491234567890" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="heroBtn3">WhatsApp Anfrage</a>
+          <a href="https://wa.me/491743777794" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="heroBtn3">WhatsApp Anfrage</a>
         </div>
 
         <div class="trust-line">
@@ -2180,7 +2289,7 @@
         <div class="fact-card glass reveal">
           <div class="fact-label" data-i18n="factLabel4">Außenbereich</div>
           <div class="fact-value">23 m² Terrasse</div>
-          <p data-i18n="factText4">Schöne Terrasse, 233 m² Grundstück und Garage – ideal für stilvolles Indoor-Outdoor-Wohnen.</p>
+          <p data-i18n="factText4">Schöne Terrasse, 233 m² Grundstück und Garage - ideal für stilvolles Indoor-Outdoor-Wohnen.</p>
         </div>
       </div>
     </div>
@@ -2201,7 +2310,7 @@
             Dieses Objekt ist etwas Besonderes: außen absolutes Understatement, innen ein kompromissloser Ausdruck von Luxus, Komfort und moderner Architekturqualität.
           </p>
           <p data-i18n="descP2">
-            Das Wohnhaus wurde mit außergewöhnlichem Aufwand und viel Liebe zum Detail modernisiert. Fenster, Elektrik, Heizung, Sanitär, Küche – nahezu alle wesentlichen Komponenten wurden auf einen zeitgemäßen Premium-Standard gebracht. Lediglich kleinere Restarbeiten konnten wetterbedingt außen noch nicht final abgeschlossen werden.
+            Das Wohnhaus wurde mit außergewöhnlichem Aufwand und viel Liebe zum Detail modernisiert. Fenster, Elektrik, Heizung, Sanitär, Küche - nahezu alle wesentlichen Komponenten wurden auf einen zeitgemäßen Premium-Standard gebracht. Lediglich kleinere Restarbeiten konnten wetterbedingt außen noch nicht final abgeschlossen werden.
           </p>
           <p data-i18n="descP3">
             Die Doppelhaushälfte mit Keller bietet Raum, Licht und Luxus auf drei Ebenen in bester Lage von Oberasbach. Stilvolle Architektur trifft auf Ausstattungsqualität, die in diesem Segment selten zu finden ist: luftiges Loft-Dachgeschoss, dekorative Sichtbalken, große Fensterflächen, Premium-Fliesen, elegante Bäder und eine Traumküche mit Markengeräten.
@@ -2361,7 +2470,7 @@
           <div class="btn-group">
             <a href="#contact" class="btn btn-primary" data-i18n="videoBtn1">Besichtigung anfragen</a>
             <!-- REPLACE: WhatsApp link -->
-            <a href="https://wa.me/491234567890" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="videoBtn2">Per WhatsApp fragen</a>
+            <a href="https://wa.me/491743777794" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="videoBtn2">Per WhatsApp fragen</a>
           </div>
         </div>
       </div>
@@ -2418,7 +2527,7 @@
             Gelegen im Landkreis Fürth, südwestlich von Nürnberg, profitiert diese Immobilie von einer Adresse, die komfortables Rundum-Wohnen mit kurzen Wegen ermöglicht.
           </p>
           <p data-i18n="locationP2">
-            Einkaufsmöglichkeiten, Bäckereien, Schulen, Kindergärten, Natur sowie starke Mobilitätsanbindungen – inklusive hervorragender Verbindung nach Nürnberg, Fürth und zur Südwesttangente – befinden sich im direkten Umfeld.
+            Einkaufsmöglichkeiten, Bäckereien, Schulen, Kindergärten, Natur sowie starke Mobilitätsanbindungen - inklusive hervorragender Verbindung nach Nürnberg, Fürth und zur Südwesttangente - befinden sich im direkten Umfeld.
           </p>
 
           <ul class="location-list">
@@ -2465,7 +2574,7 @@
 
           <div class="contact-cards">
             <div class="contact-card">
-              <a class="contact-card-link" href="tel:+491234567890">
+              <a class="contact-card-link" href="tel:+491743777794">
                 <span class="contact-card-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.61a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.47-1.29a2 2 0 0 1 2.11-.45c.83.3 1.71.51 2.61.63A2 2 0 0 1 22 16.92z"/>
@@ -2473,13 +2582,13 @@
                 </span>
                 <span class="contact-card-text">
                   <small data-i18n="contactPhone">Telefon</small>
-                  <span>+49 123 456 7890</span>
+                  <span>+49 174 377 7794</span>
                 </span>
               </a>
             </div>
 
             <div class="contact-card">
-              <a class="contact-card-link" href="https://wa.me/491234567890" target="_blank" rel="noopener">
+              <a class="contact-card-link" href="https://wa.me/491743777794" target="_blank" rel="noopener">
                 <span class="contact-card-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20.52 3.48A11.8 11.8 0 0 0 12.07 0C5.56 0 .25 5.31.25 11.82c0 2.08.54 4.11 1.56 5.9L0 24l6.47-1.69a11.8 11.8 0 0 0 5.6 1.43h.01c6.51 0 11.82-5.31 11.82-11.82 0-3.16-1.23-6.13-3.38-8.44z" transform="scale(.9) translate(1 1)"/>
@@ -2553,8 +2662,8 @@
           </div> -->
 
           <div class="btn-group">
-            <a href="tel:+491234567890" class="btn btn-primary" data-i18n="contactCtaPhone">Jetzt anrufen</a>
-            <a href="https://wa.me/491234567890" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="contactCtaWhatsApp">WhatsApp öffnen</a>
+            <a href="tel:+491743777794" class="btn btn-primary" data-i18n="contactCtaPhone">Jetzt anrufen</a>
+            <a href="https://wa.me/491743777794" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="contactCtaWhatsApp">WhatsApp öffnen</a>
             <a href="mailto:info@example.com" class="btn btn-secondary" data-i18n="contactCtaEmail">E-Mail schreiben</a>
           </div>
 
@@ -2577,7 +2686,7 @@
         <div class="btn-group" style="justify-content:center;">
           <a href="#contact" class="btn btn-primary" data-i18n="ctaBtn1">Private Besichtigung vereinbaren</a>
           <!-- REPLACE: phone number -->
-          <a href="tel:+491234567890" class="btn btn-secondary" data-i18n="ctaBtn2">Jetzt anrufen</a>
+          <a href="tel:+491743777794" class="btn btn-secondary" data-i18n="ctaBtn2">Jetzt anrufen</a>
         </div>
       </div>
     </div>
@@ -2608,8 +2717,15 @@
     </div>
   </div>
 
+  <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5"/>
+      <path d="m5 12 7-7 7 7"/>
+    </svg>
+  </button>
+
   <!-- REPLACE: WhatsApp link -->
-  <a class="floating-wa" href="https://wa.me/491234567890" target="_blank" rel="noopener" aria-label="Open WhatsApp">
+  <a class="floating-wa" href="https://wa.me/491743777794" target="_blank" rel="noopener" aria-label="Open WhatsApp">
     <svg width="28" height="28" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
       <path d="M19.11 17.23c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.18-1.35-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.45-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28 0 1.34.98 2.64 1.11 2.82.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.55.58.65.21 1.24.18 1.7.11.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 3.2c-7.06 0-12.78 5.72-12.78 12.78 0 2.25.59 4.45 1.71 6.39L3.2 28.8l6.6-1.72a12.73 12.73 0 0 0 6.22 1.59h.01c7.05 0 12.77-5.72 12.77-12.78 0-3.42-1.33-6.63-3.75-9.05A12.68 12.68 0 0 0 16.02 3.2zm0 23.31h-.01a10.54 10.54 0 0 1-5.37-1.47l-.39-.23-3.91 1.02 1.04-3.81-.25-.39a10.56 10.56 0 1 1 8.89 4.88z"/>
     </svg>
@@ -2634,7 +2750,7 @@
         callNow: "Jetzt anrufen",
         heroKicker: "Beste Familienlage • am Naturschutzgebiet • Einkauf & Schule in der Nähe",
         heroTitle: 'Modernisierte <span class="gold">Doppelhaushälfte</span> in bester Lage von Oberasbach.',
-        heroSubtitle: "Direkt vom Eigentümer — provisionsfrei für Käufer.",
+        heroSubtitle: "Direkt vom Eigentümer - provisionsfrei für Käufer.",
         heroDescription: 'Diese hochwertig modernisierte Doppelhaushälfte vereint <span class="gold">stilvolles Design</span>, großzügiges Wohnen und die perfekte Lage für Familien. Direkt am Naturschutzgebiet gelegen und trotzdem nur wenige Gehminuten zum Lidl, zur Grundschule und Kita. Mit spa-ähnlichen Bädern, Fußbodenheizung, ausgebautem Dachgeschoss, Terrasse und Garage bietet sie Wohnqualität auf Top-Niveau nahe Fürth und Nürnberg.',
         heroBtn1: "Besichtigung anfragen",
         heroBtn2: "Galerie ansehen",
@@ -2660,10 +2776,10 @@
         factLabel3: "Aufteilung",
         factText3: "Großzügiges Raumkonzept über Erdgeschoss, Obergeschoss und ausgebautes Loft-Dachgeschoss.",
         factLabel4: "Außenbereich",
-        factText4: "Schöne Terrasse, 233 m² Grundstück und Garage – ideal für stilvolles Indoor-Outdoor-Wohnen.",
+        factText4: "Schöne Terrasse, 233 m² Grundstück und Garage - ideal für stilvolles Indoor-Outdoor-Wohnen.",
         descTitle: 'Ein Zuhause, das sich <span class="gold">weit über dem Gewöhnlichen</span> anfühlt',
         descP1: "Dieses Objekt ist etwas Besonderes: außen absolutes Understatement, innen ein kompromissloser Ausdruck von Luxus, Komfort und moderner Architekturqualität.",
-        descP2: "Das Wohnhaus wurde mit außergewöhnlichem Aufwand und viel Liebe zum Detail modernisiert. Fenster, Elektrik, Heizung, Sanitär, Küche – nahezu alle wesentlichen Komponenten wurden auf einen zeitgemäßen Premium-Standard gebracht. Lediglich kleinere Restarbeiten konnten wetterbedingt außen noch nicht final abgeschlossen werden.",
+        descP2: "Das Wohnhaus wurde mit außergewöhnlichem Aufwand und viel Liebe zum Detail modernisiert. Fenster, Elektrik, Heizung, Sanitär, Küche - nahezu alle wesentlichen Komponenten wurden auf einen zeitgemäßen Premium-Standard gebracht. Lediglich kleinere Restarbeiten konnten wetterbedingt außen noch nicht final abgeschlossen werden.",
         descP3: "Die Doppelhaushälfte mit Keller bietet Raum, Licht und Luxus auf drei Ebenen in bester Lage von Oberasbach. Stilvolle Architektur trifft auf Ausstattungsqualität, die in diesem Segment selten zu finden ist: luftiges Loft-Dachgeschoss, dekorative Sichtbalken, große Fensterflächen, Premium-Fliesen, elegante Bäder und eine Traumküche mit Markengeräten.",
         descQuote: "„Ein Zuhause für Käufer, die Design, Präzision, Atmosphäre und das seltene Gefühl einer vollständig durchdachten Vision schätzen.“",
         featuresTitle: 'Kuratiertes Premium-Design in <span class="gold">jeder Ebene des Hauses</span>',
@@ -2715,7 +2831,7 @@
         locationTitle: 'Bevorzugte Wohnlage in <span class="gold">Oberasbach</span>',
         locationSub: "Zwischen urbaner Anbindung und ruhigem Wohnen",
         locationP1: "Gelegen im Landkreis Fürth, südwestlich von Nürnberg, profitiert diese Immobilie von einer Adresse, die komfortables Rundum-Wohnen mit kurzen Wegen ermöglicht.",
-        locationP2: "Einkaufsmöglichkeiten, Bäckereien, Schulen, Kindergärten, Natur sowie starke Mobilitätsanbindungen – inklusive hervorragender Verbindung nach Nürnberg, Fürth und zur Südwesttangente – befinden sich im direkten Umfeld.",
+        locationP2: "Einkaufsmöglichkeiten, Bäckereien, Schulen, Kindergärten, Natur sowie starke Mobilitätsanbindungen - inklusive hervorragender Verbindung nach Nürnberg, Fürth und zur Südwesttangente - befinden sich im direkten Umfeld.",
         locationLi1: "Bevorzugte Lage in Oberasbach",
         locationLi2: "Nähe zu Fürth und Nürnberg",
         locationLi3: "Naturschutzgebiet mit Spazier- und Radwegen in direkter Nähe",
@@ -2784,7 +2900,7 @@
         callNow: "Call Now",
         heroKicker: "Top family location • adjacent to nature reserve • shopping & school within walking distance",
         heroTitle: 'Modernized <span class="gold">semi-detached house</span> in prime Oberasbach location.',
-        heroSubtitle: "Directly from owner — no buyer’s commission.",
+        heroSubtitle: "Directly from owner - no buyer’s commission.",
         heroDescription: 'This high-quality, modernized semi-detached house combines <span class="gold">stylish design</span>, spacious living, and the perfect location for families. Directly adjacent to a nature reserve and still only a short walk to Lidl, elementary school, and daycare. With spa-like bathrooms, underfloor heating, converted attic, terrace, and garage, it offers top-level living quality near Fürth and Nuremberg.',
         heroBtn1: "Request Viewing",
         heroBtn2: "View Gallery",
@@ -2810,10 +2926,10 @@
         factLabel3: "Layout",
         factText3: "Generous living concept across ground floor, upper floor, and converted loft attic.",
         factLabel4: "Outdoor area",
-        factText4: "Beautiful terrace, 233 m² plot, and garage – ideal for stylish indoor-outdoor living.",
+        factText4: "Beautiful terrace, 233 m² plot, and garage - ideal for stylish indoor-outdoor living.",
         descTitle: 'A home that feels <span class="gold">far beyond ordinary</span>',
         descP1: "This property is something special: understated on the outside, yet inside a bold expression of luxury, comfort, and modern architectural quality.",
-        descP2: "The house was modernized with exceptional effort and a remarkable eye for detail. Windows, electrics, heating, plumbing, kitchen – nearly all major components were brought to a contemporary premium standard. Only a few small outdoor tasks remain due to weather conditions.",
+        descP2: "The house was modernized with exceptional effort and a remarkable eye for detail. Windows, electrics, heating, plumbing, kitchen - nearly all major components were brought to a contemporary premium standard. Only a few small outdoor tasks remain due to weather conditions.",
         descP3: "The semi-detached house with basement offers space, light, and luxury across three levels in a prime Oberasbach location. Stylish architecture meets equipment rarely found in this segment: airy loft attic, decorative exposed beams, large windows, premium tile finishes, elegant bathrooms, and a dream kitchen with branded appliances.",
         descQuote: "“A home for buyers who appreciate design, precision, atmosphere, and the rare feeling of a fully realized vision.”",
         featuresTitle: 'Curated premium design on <span class="gold">every level of the house</span>',
@@ -2865,7 +2981,7 @@
         locationTitle: 'Preferred residential location in <span class="gold">Oberasbach</span>',
         locationSub: "Between urban access and peaceful living",
         locationP1: "Located in the district of Fürth, southwest of Nuremberg, this property benefits from an address that enables comfortable all-round living with short distances.",
-        locationP2: "Shopping, bakeries, schools, daycare, nature, and strong transport links – including excellent access to Nuremberg, Fürth, and the Südwesttangente – are all nearby.",
+        locationP2: "Shopping, bakeries, schools, daycare, nature, and strong transport links - including excellent access to Nuremberg, Fürth, and the Südwesttangente - are all nearby.",
         locationLi1: "Preferred location in Oberasbach",
         locationLi2: "Near Fürth and Nuremberg",
         locationLi3: "Nature reserve with walking and cycling paths nearby",
@@ -2922,12 +3038,29 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const navbar = document.getElementById("navbar");
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
     const handleNavbar = () => {
       if (window.scrollY > 20) navbar.classList.add("scrolled");
       else navbar.classList.remove("scrolled");
+
+      if (scrollTopBtn) {
+        if (window.scrollY > 320) scrollTopBtn.classList.add("show");
+        else scrollTopBtn.classList.remove("show");
+      }
     };
+
     handleNavbar();
-    window.addEventListener("scroll", handleNavbar);
+    window.addEventListener("scroll", handleNavbar, { passive: true });
+
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
 
     const navToggle = document.getElementById("navToggle");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -2970,11 +3103,11 @@
     setActiveNav();
 
     const additionalGalleryImages = [
-      { src: "assets/images/gallery-6.jpg", captionDe: "Zusätzlicher Eindruck 1", captionEn: "Additional view 1" },
-      { src: "assets/images/gallery-7.jpg", captionDe: "Zusätzlicher Eindruck 2", captionEn: "Additional view 2" },
-      { src: "assets/images/gallery-8.jpg", captionDe: "Zusätzlicher Eindruck 3", captionEn: "Additional view 3" },
-      { src: "assets/images/gallery-9.jpg", captionDe: "Zusätzlicher Eindruck 4", captionEn: "Additional view 4" },
-      { src: "assets/images/gallery-10.jpg", captionDe: "Zusätzlicher Eindruck 4", captionEn: "Additional view 4" }
+      { src: "assets/images/gallery-6.jpg", captionDe: "", captionEn: "" },
+      { src: "assets/images/gallery-7.jpg", captionDe: "", captionEn: "" },
+      { src: "assets/images/gallery-8.jpg", captionDe: "", captionEn: "" },
+      { src: "assets/images/gallery-9.jpg", captionDe: "", captionEn: "" },
+      { src: "assets/images/gallery-10.jpg", captionDe: "", captionEn: "" }
     ];
 
     const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
