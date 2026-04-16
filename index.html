@@ -174,15 +174,16 @@
     }
 
     .btn-primary {
-      background:
-        linear-gradient(135deg, #e4bf71 0%, #c7923d 55%, #b77a28 100%);
-      color: #17110d;
-      box-shadow: 0 14px 34px rgba(199,146,61,0.24);
-    }
+  background: linear-gradient(135deg, #4b3a43 0%, #3b2c34 52%, #241b22 100%);
+  color: #f7efe4;
+  box-shadow: 0 14px 34px rgba(36, 27, 34, 0.34);
+  border: 1px solid rgba(255,255,255,0.06);
+}
 
-    .btn-primary:hover {
-      box-shadow: 0 20px 44px rgba(199,146,61,0.3);
-    }
+.btn-primary:hover {
+  background: linear-gradient(135deg, #58454f 0%, #46343d8c 52%, #2b202759 100%);
+  box-shadow: 0 20px 44px rgba(36, 27, 34, 0.42);
+}
 
     .btn-secondary {
       background: rgba(255,255,255,0.04);
@@ -341,10 +342,10 @@
     }
 
     .lang-btn.active {
-      background:
-        linear-gradient(135deg, #e4bf71 0%, #c7923d 55%, #b77a28 100%);
-      color: #15100c;
-      box-shadow: 0 8px 24px rgba(214,181,116,0.22);
+      background: linear-gradient(135deg, #4b3a43 0%, #3b2c34 52%, #241b22 100%);
+      color: #f7efe4;
+      box-shadow: 0 8px 24px rgba(36, 27, 34, 0.34);
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
     .nav-toggle {
@@ -515,13 +516,11 @@
       letter-spacing: 0.12em;
       font-size: 14px;
       font-weight: 800;
-      color: #23180f;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.22), transparent 18%),
-        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.12), transparent 18%),
-        linear-gradient(135deg, #efcf8e 0%, #d5a451 45%, #b6792e 100%);
-      box-shadow: 0 14px 34px rgba(199,146,61,0.22);
-      border: 1px solid rgba(255,255,255,0.16);
+      color: var(--gold-2);
+      background: linear-gradient(90deg, rgba(104,64,39,0.88), rgba(82,49,32,0.82));
+      box-shadow: 0 14px 34px rgba(0,0,0,0.22);
+      border: 1px solid rgba(232, 192, 121, 0.28);
+      backdrop-filter: blur(10px);
       z-index: 5;
     }
 
@@ -565,6 +564,14 @@
       border-radius: 18px;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(233, 197, 124, 0.12);
+    }
+
+    .hero-stats-mobile {
+      display: none;
+    }
+
+    .stat-price-box {
+      display: none;
     }
 
     .stat-item strong {
@@ -2028,9 +2035,7 @@
       }
 
       .hero-description {
-        font-size: 15px;
-        line-height: 1.75;
-        margin-bottom: 18px;
+        display: none;
       }
 
       .hero-content .btn-group .btn {
@@ -2062,7 +2067,7 @@
       }
 
       .hero-card {
-        padding-top: 58px;
+        display: none !important;
       }
 
       .hero-card-badge {
@@ -2082,8 +2087,46 @@
       }
 
       .stat-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+      }
+
+      .hero-stats-mobile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .stat-price-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1 / -1;
+        width: 62%;
+        margin: 0 auto;
+        padding: 14px 20px;
+        background: linear-gradient(135deg, rgba(199,146,61,0.22), rgba(185,128,47,0.14));
+        border: 1px solid rgba(199,146,61,0.38);
+        text-align: center;
+        gap: 2px;
+      }
+
+      .stat-price-label {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold-2);
+        font-weight: 600;
+      }
+
+      .stat-price-value {
+        font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+        font-size: 28px;
+        color: var(--gold-2);
+        font-weight: 700;
+        letter-spacing: 0.04em;
       }
 
       .stat-item {
@@ -2198,6 +2241,29 @@
         <p class="hero-description" data-i18n-html="heroDescription">
           Diese hochwertig modernisierte Doppelhaushälfte vereint <span class="gold">stilvolles Design</span>, großzügiges Wohnen und die perfekte Lage für Familien. Direkt am Naturschutzgebiet gelegen und trotzdem nur wenige Gehminuten zum Lidl, zur Grundschule und Kita. Mit spa-ähnlichen Bädern, Fußbodenheizung, ausgebautem Dachgeschoss, Terrasse und Garage bietet sie Wohnqualität auf Top-Niveau nahe Fürth und Nürnberg.
         </p>
+
+        <div class="hero-stats-mobile">
+          <div class="stat-item">
+            <strong>152 m²</strong>
+            <span data-i18n="livingSpace">Wohnfläche</span>
+          </div>
+          <div class="stat-item">
+            <strong>233 m²</strong>
+            <span data-i18n="plotArea">Grundstück</span>
+          </div>
+          <div class="stat-item">
+            <strong>4</strong>
+            <span data-i18n="spaciousRooms">Großzügige Zimmer</span>
+          </div>
+          <div class="stat-item">
+            <strong>3+1</strong>
+            <span data-i18n="bathGuest">Bäder + Gäste-WC</span>
+          </div>
+          <div class="stat-item stat-price-box">
+            <span class="stat-price-label" data-i18n="askingPrice">Angebotspreis</span>
+            <strong class="stat-price-value">€695,000</strong>
+          </div>
+        </div>
 
         <div class="btn-group">
           <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">Besichtigung anfragen</a>
